@@ -6,7 +6,20 @@ package csu.csci325;
 public class ChessPiece {
     // color
     // can move
+    private ChessPiece mPiece;
+    private boolean mColor;
     public ChessPiece(){
 
     }
+    public ChessPiece(boolean color){
+        mColor = color;
+    }
+    public ChessPiece(ChessPiece piece, boolean color){
+        mPiece = piece;
+        mColor = color;
+    }
+    public boolean getColor(){
+        return mColor;
+    }
+
 }
