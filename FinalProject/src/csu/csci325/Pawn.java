@@ -9,7 +9,7 @@ public class Pawn  extends ChessPiece{
      *          forward one space
      *          diagonally one space if attacking opponent
      */
-    static boolean mColor;
+    boolean mColor;
     public Pawn (){
 
     }
@@ -18,8 +18,8 @@ public class Pawn  extends ChessPiece{
     }
     public String toString(){
         if (mColor) {
-            return "White King   ";
+            return "Pawn W       ";
         }
-        return     "Black Pawn   ";
+        return     "Pawn B       ";
     }
 }

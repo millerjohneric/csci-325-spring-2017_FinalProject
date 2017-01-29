@@ -8,7 +8,7 @@ public class King extends ChessPiece {
      * motion:  CANNOT MOVE INTO CHECK
      *          up, down, left, right, diagonal one space only
      */
-    static boolean mColor;
+    boolean mColor;
     public King(){
 
     }
@@ -17,9 +17,9 @@ public class King extends ChessPiece {
     }
     public String toString(){
         if (mColor) {
-            return "White King   ";
+            return "King W       ";
         }
-        return     "Black King   ";
+        return     "King B       ";
     }
 
 }

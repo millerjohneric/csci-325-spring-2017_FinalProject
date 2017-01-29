@@ -8,7 +8,7 @@ public class Knight extends ChessPiece {
      * motion:  MUST MOVE TWO SPACES THEN ONE PERPENDICULAR TO ORIGINAL DIRECTION
      *          up, down, left, right, diagonal any value of spaces
      */
-    static boolean mColor;
+    boolean mColor;
     public Knight(){
 
     }
@@ -17,8 +17,8 @@ public class Knight extends ChessPiece {
     }
     public String toString(){
         if (mColor) {
-            return "White King   ";
+            return "King W       ";
         }
-        return     "Black Knight ";
+        return     "Knight B     ";
     }
 }

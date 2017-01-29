@@ -8,7 +8,7 @@ public class Queen  extends ChessPiece{
      * motion:
      *          up, down, left, right, diagonal any value of spaces
      */
-    static boolean mColor;
+    boolean mColor;
     public Queen(){
 
     }
@@ -17,8 +17,8 @@ public class Queen  extends ChessPiece{
     }
     public String toString(){
         if (mColor) {
-            return "White Queen  ";
+            return "Queen W      ";
         }
-        return     "Black Queen  ";
+        return     "Queen B      ";
     }
 }
