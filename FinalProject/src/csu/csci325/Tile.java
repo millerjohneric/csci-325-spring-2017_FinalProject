@@ -4,8 +4,8 @@ package csu.csci325;
  * Created by Millerjohneric on 1/27/2017.
  */
 public class Tile {
-    private static boolean mColor;
-    private static ChessPiece mPiece;
+    private boolean mColor;
+    private ChessPiece mPiece;
     public Tile(){
 
     }
@@ -23,4 +23,13 @@ public class Tile {
     public ChessPiece getPiece(){
         return mPiece;
     }
+ //   public ChessPiece getPieceName(){
+ //       return mPiece.toString();
+ //   }
+ public String toString(){
+     if (mColor) {
+         return Character.toString((char)87);
+     }
+     return Character.toString((char)66);
+ }
 }

@@ -10,10 +10,19 @@ public class Bishop  extends ChessPiece{
      */
     // color
     // tileColor
+
+    static boolean mColor;
     public Bishop(){
 
     }
-    public String Iam(){
-        return "Bishop";
+    public Bishop(boolean color){
+        mColor = color;
+    }
+
+    public String toString(){
+        if (mColor) {
+            return "White Bishop ";
+        }
+        return "Black Bishop ";
     }
 }

@@ -8,10 +8,17 @@ public class Rook  extends ChessPiece{
      * motion:
      *          up, down, left, right any value of spaces
      */
+    static boolean mColor;
     public Rook(){
 
     }
-    public String Iam(){
-        return "Rook";
+    public Rook(boolean color){
+        mColor = color;
+    }
+    public String toString(){
+        if (mColor) {
+            return "White Rook ";
+        }
+        return  "Black Rook ";
     }
 }

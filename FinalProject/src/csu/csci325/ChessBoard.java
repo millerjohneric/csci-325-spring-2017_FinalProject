@@ -13,23 +13,23 @@ public class ChessBoard {
     private static int SIDELENGTH = 8;
     private static boolean WHITE = true;
     private static boolean BLACK = false;
-    private static Tile[][] mtiles;
+    private static Tile[][] mTiles;
     public ChessBoard(){
-        mtiles = new Tile[SIDELENGTH][SIDELENGTH];
+        mTiles = new Tile[SIDELENGTH][SIDELENGTH];
         boolean result;
 
 
-        for (int frontToBack = 0; frontToBack < SIDELENGTH; frontToBack++) {
+        for (int backToFront = 0; backToFront < SIDELENGTH; backToFront++) {
             for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++) {
-                mtiles[leftToRight][frontToBack] = new Tile();
-                if (leftToRight % 2 != 0 && frontToBack % 2 == 0) {
-                    result = mtiles[leftToRight][frontToBack].setColor(WHITE);
-                }else if (leftToRight % 2 != 0 && frontToBack % 2 != 0) {
-                    result = mtiles[leftToRight][frontToBack].setColor(BLACK);
-                }else if (leftToRight % 2 == 0 && frontToBack % 2 == 0) {
-                    result = mtiles[leftToRight][frontToBack].setColor(BLACK);
+                mTiles[leftToRight][backToFront] = new Tile();
+                if (leftToRight % 2 == 0 && backToFront % 2 == 0) {
+                    result = mTiles[leftToRight][backToFront].setColor(WHITE);
+                }else if (leftToRight % 2 != 0 && backToFront % 2 != 0) {
+                    result = mTiles[leftToRight][backToFront].setColor(BLACK);
+                }else if (leftToRight % 2 != 0 && backToFront % 2 == 0) {
+                    result = mTiles[leftToRight][backToFront].setColor(BLACK);
                 } else {
-                    result = mtiles[leftToRight][frontToBack].setColor(WHITE);
+                    result = mTiles[leftToRight][backToFront].setColor(WHITE);
                 }
             }
         }
@@ -38,42 +38,41 @@ public class ChessBoard {
     public boolean Set(){
         // set white pawns
         for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++) {
-                mtiles[leftToRight][0].setPiece(new ChessPiece(new Pawn(),WHITE));
+                mTiles[leftToRight][1].setPiece(new Pawn(WHITE));
             }
         // set rooks
-        mtiles[1][0].setPiece(new Rook());
-        mtiles[1][7].setPiece(new ChessPiece(new Rook(),WHITE));
+        mTiles[0][0].setPiece(new Rook(WHITE));
+        mTiles[0][7].setPiece(new Rook(WHITE));
         // set knights
-        mtiles[1][1].setPiece(new ChessPiece(new Knight(),WHITE));
-        mtiles[1][6].setPiece(new ChessPiece(new Knight(),WHITE));
+        mTiles[0][1].setPiece(new Knight(WHITE));
+        mTiles[0][6].setPiece(new Knight(WHITE));
         // set bishops
-        mtiles[1][2].setPiece(new ChessPiece(new Bishop(),WHITE));
-        mtiles[1][5].setPiece(new ChessPiece(new Bishop(),WHITE));
+        mTiles[0][2].setPiece(new Bishop(WHITE));
+        mTiles[0][5].setPiece(new Bishop(WHITE));
         // set king
-        mtiles[1][3].setPiece(new ChessPiece(new King(),WHITE));
+        mTiles[0][3].setPiece(new King(WHITE));
         // set queen
-        mtiles[1][4].setPiece(new ChessPiece(new Queen(),WHITE));
+        mTiles[0][4].setPiece(new Queen(WHITE));
 
 
 
         // set black pawns
         for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++) {
-            mtiles[leftToRight][7].setPiece(new ChessPiece(BLACK));
+            mTiles[leftToRight][7].setPiece(new Pawn(BLACK));
         }
         // set rooks
-        mtiles[6][0].setPiece(new ChessPiece(BLACK));
-        mtiles[6][7].setPiece(new ChessPiece(BLACK));
+        mTiles[7][0].setPiece(new Rook(BLACK));
+        mTiles[7][7].setPiece(new Rook(BLACK));
         // set knights
-        mtiles[6][1].setPiece(new ChessPiece(BLACK));
-        mtiles[6][6].setPiece(new ChessPiece(BLACK));
+        mTiles[7][1].setPiece(new Knight(BLACK));
+        mTiles[7][6].setPiece(new Knight(BLACK));
         // set bishops
-        mtiles[6][2].setPiece(new ChessPiece(BLACK));
-        mtiles[6][5].setPiece(new ChessPiece(BLACK));
+        mTiles[7][2].setPiece(new Bishop(BLACK));
+        mTiles[7][5].setPiece(new Bishop(BLACK));
         // set king
-        mtiles[6][4].setPiece(new ChessPiece(BLACK));
+        mTiles[7][4].setPiece(new King(BLACK));
         // set queen
-        mtiles[6][3].setPiece(new ChessPiece(BLACK));
-
+        mTiles[7][3].setPiece(new Queen(BLACK));
         return false;
     }
     public boolean Clear(){
@@ -82,11 +81,12 @@ public class ChessBoard {
     }
     public void Display(){
         //tiles = new Tile[SIDELENGTH][SIDELENGTH];
-        for (int frontToBack = 0; frontToBack < SIDELENGTH; frontToBack++){
+        for (int backToFront = 0; backToFront < SIDELENGTH; backToFront++){
             for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
-                System.out.print(mtiles[leftToRight][frontToBack].getPiece().toString()
-                + " " + mtiles[leftToRight][frontToBack].getColor());
+                System.out.print(mTiles[leftToRight][backToFront].toString());
+                       // + " " + mTiles[leftToRight][backToFront].getPiece().toString() + "     ");
             }
+            System.out.println("");
         }
     }
 
