@@ -18,8 +18,8 @@ public class Pawn  extends ChessPiece{
     }
     public String toString(){
         if (mColor) {
-            return "White King ";
+            return "White King   ";
         }
-        return  "Black Pawn ";
+        return     "Black Pawn   ";
     }
 }

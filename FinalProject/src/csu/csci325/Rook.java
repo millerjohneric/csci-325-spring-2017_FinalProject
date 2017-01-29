@@ -17,8 +17,8 @@ public class Rook  extends ChessPiece{
     }
     public String toString(){
         if (mColor) {
-            return "White Rook ";
+            return "White Rook   ";
         }
-        return  "Black Rook ";
+        return     "Black Rook   ";
     }
 }

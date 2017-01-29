@@ -17,8 +17,8 @@ public class Queen  extends ChessPiece{
     }
     public String toString(){
         if (mColor) {
-            return "White Queen ";
+            return "White Queen  ";
         }
-        return  "Black Queen ";
+        return     "Black Queen  ";
     }
 }

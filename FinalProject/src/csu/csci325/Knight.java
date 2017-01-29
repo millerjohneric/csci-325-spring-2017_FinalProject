@@ -17,8 +17,8 @@ public class Knight extends ChessPiece {
     }
     public String toString(){
         if (mColor) {
-            return "White King ";
+            return "White King   ";
         }
-        return  "Black Knight ";
+        return     "Black Knight ";
     }
 }
