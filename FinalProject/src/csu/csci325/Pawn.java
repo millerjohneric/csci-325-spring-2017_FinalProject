@@ -9,17 +9,20 @@ public class Pawn  extends ChessPiece{
      *          forward one space
      *          diagonally one space if attacking opponent
      */
-    boolean mColor;
+    int mColor;
     public Pawn (){
 
     }
-    public Pawn(boolean color){
+    public Pawn(int color){
         mColor = color;
     }
     public String toString(){
-        if (mColor) {
+        if (mColor == 1) {
             return "Pawn W       ";
+        }else if (mColor == 0) {
+            return "Pawn B       ";
+        }else{
+            return "";
         }
-        return     "Pawn B       ";
     }
 }

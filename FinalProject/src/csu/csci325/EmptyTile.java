@@ -11,6 +11,9 @@ public class EmptyTile extends ChessPiece{
 
     }
 
+    public int getColor(){
+        return -1;
+    }
     public String toString(){
             return "             ";
     }

@@ -7,21 +7,24 @@ public class ChessPiece {
     // color
     // can move
     private static ChessPiece mPiece;
-    private static boolean mColor;
+    private static int mColor;
     public ChessPiece(){
 
     }
 
-    public ChessPiece(boolean color){
+    public ChessPiece(int color){
         mColor = color;
     }
-    public ChessPiece(ChessPiece piece, boolean color){
+    public ChessPiece(ChessPiece piece, int color){
         mPiece = piece;
         mColor = color;
     }
-    public boolean getColor(){
+    public int getColor(){
         return mColor;
     }
 
 
+    public boolean CanMove() {
+        return false;
+    }
 }

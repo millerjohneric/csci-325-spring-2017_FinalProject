@@ -24,7 +24,11 @@ public class Main_PlayChess {
             origin = scanner.nextLine();// input the values
             System.out.println("Enter the tile name of the destination: "); // prompt the user for values
             destination = scanner.nextLine();// input the values
-            gameBoard.MovePiece(origin, destination);
+            if (gameBoard.MovePiece(origin, destination)== -1){
+                System.out.println("You cannot move here you already have a piece on that tile.");
+                // Scanner.nextLine();
+            }
+
             gameBoard.Display();
         } while (origin != "");
         // gameBoard.mTiles[4][4].setPiece( gameBoard.mTiles[4][6].getPiece());

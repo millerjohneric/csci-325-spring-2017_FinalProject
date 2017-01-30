@@ -8,16 +8,20 @@ public class ChessBoard {
     // left to right is a to h
     // back to front is 8 to 1
     private static int SIDELENGTH = 8;
-    private static boolean WHITE = true;
-    private static boolean BLACK = false;
+    private static int WHITE = 1;
+    private static int BLACK = 0;
     public static Tile[][] mTiles;
+    public static Tile[] mBlackOffBoard;
+    public static Tile[] mWhiteOffBoard;
     private int[] mOrigin;
     private int[] mDestination;
     public ChessBoard(){
         mTiles = new Tile[SIDELENGTH][SIDELENGTH];
+        mBlackOffBoard = new Tile[16];
+        mWhiteOffBoard = new Tile[16];
         mOrigin = new int[2];
         mDestination = new int [2];
-        boolean result;
+        int result;
         mOrigin[0] = 9;
         mOrigin[1] = 9;
 
@@ -136,14 +140,19 @@ public class ChessBoard {
         }
     }
     public int MovePiece(String origin, String destination){
-
-        ParseLocation(origin,mOrigin);
-       // System.out.println(mOrigin[0] + " " + mOrigin[1]);
-        ParseLocation(destination,mDestination);
-
+        ValidateMove(origin, destination);
+        // is anything already there
+        ChessPiece destPiece = mTiles[mDestination[0]][mDestination[1]].getPiece();
+        ChessPiece movingPiece = mTiles[mOrigin[0]][mOrigin[1]].getPiece();
+        System.out.println(destPiece.getColor());
+        System.out.println(movingPiece.getColor());
+        if (destPiece.getColor() == movingPiece.getColor()){
+            System.out.println(destPiece.toString());
+            return -1;
+        }
         mTiles[mDestination[0]][mDestination[1]].setPiece( mTiles[mOrigin[0]][mOrigin[1]].getPiece());
         mTiles[mOrigin[0]][mOrigin[1]].setPiece(new EmptyTile());
-        return -1;
+        return 0;
     }
     private boolean ParseLocation(String location, int[] coord){
         String subString;
@@ -184,5 +193,14 @@ public class ChessBoard {
                 return false;
         }
         return true;
+    }
+    private boolean ValidateMove(String origin, String destination){
+        ParseLocation(origin,mOrigin);
+        // System.out.println(mOrigin[0] + " " + mOrigin[1]);
+        ParseLocation(destination,mDestination);
+       if ( mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove() == true){
+
+       }
+        return false;
     }
 }

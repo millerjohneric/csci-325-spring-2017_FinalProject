@@ -4,16 +4,16 @@ package csu.csci325;
  * Created by Millerjohneric on 1/27/2017.
  */
 public class Tile {
-    private boolean mColor;
+    private int mColor;
     private ChessPiece mPiece;
     public Tile(){
 
     }
-    public boolean setColor(boolean color){
+    public int setColor(int color){
         mColor = color;
         return mColor;
     }
-    public boolean getColor(){
+    public int getColor(){
         return mColor;
     }
     public boolean setPiece(ChessPiece piece){
@@ -27,9 +27,12 @@ public class Tile {
  //       return mPiece.toString();
  //   }
  public String toString(){
-     if (mColor) {
+     if (mColor == 1) {
          return Character.toString((char)87) + "####################";
+     }else if (mColor == 0) {
+         return Character.toString((char) 66) + "                    ";
+     }else{
+         return "";
      }
-     return Character.toString((char)66) + "                    ";
  }
 }
