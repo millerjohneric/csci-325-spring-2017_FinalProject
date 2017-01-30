@@ -28,7 +28,7 @@ public class Tile {
  //   }
  public String toString(){
      if (mColor) {
-         return Character.toString((char)87) + "                    ";
+         return Character.toString((char)87) + "####################";
      }
      return Character.toString((char)66) + "                    ";
  }

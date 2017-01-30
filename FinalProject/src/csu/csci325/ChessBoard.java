@@ -5,14 +5,21 @@ package csu.csci325;
  */
 public class ChessBoard {
     // white on right bottom corner
+    // left to right is a to h
+    // back to front is 8 to 1
     private static int SIDELENGTH = 8;
     private static boolean WHITE = true;
     private static boolean BLACK = false;
-    private static Tile[][] mTiles;
+    public static Tile[][] mTiles;
+    private int[] mOrigin;
+    private int[] mDestination;
     public ChessBoard(){
         mTiles = new Tile[SIDELENGTH][SIDELENGTH];
+        mOrigin = new int[2];
+        mDestination = new int [2];
         boolean result;
-
+        mOrigin[0] = 9;
+        mOrigin[1] = 9;
 
         for (int backToFront = 0; backToFront < SIDELENGTH; backToFront++) {
             for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++) {
@@ -87,7 +94,8 @@ public class ChessBoard {
                 // System.out.print(mTiles[leftToRight][backToFront].toString());
 
                 //System.out.println("");
-                System.out.print( "|                     ");
+                System.out.print( "|");//                     ");
+                System.out.print(mTiles[leftToRight][backToFront].toString());
             }
             System.out.print( "|");
             System.out.println("");
@@ -95,7 +103,11 @@ public class ChessBoard {
                 // System.out.print(mTiles[leftToRight][backToFront].toString());
 
                 //System.out.println("");
-                System.out.print( "|   " + mTiles[leftToRight][backToFront].getPiece().toString() + "     ");
+                int temp = 97 + leftToRight;
+                int temp2 = 1 + backToFront;
+                Character.toString((char) temp);
+                System.out.print( "|" + Character.toString((char) temp) + temp2 +
+                         "     " + mTiles[leftToRight][backToFront].getPiece().toString() + " ");
             }
             System.out.print( "|");
             System.out.println("");
@@ -103,7 +115,17 @@ public class ChessBoard {
                 // System.out.print(mTiles[leftToRight][backToFront].toString());
 
                 //System.out.println("");
-                System.out.print( "|                     ");
+                System.out.print( "|");//                     ");
+                System.out.print(mTiles[leftToRight][backToFront].toString());
+            }
+            System.out.print( "|");
+            System.out.println("");
+            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
+                // System.out.print(mTiles[leftToRight][backToFront].toString());
+
+                //System.out.println("");
+                System.out.print( "|");//                     ");
+                System.out.print(mTiles[leftToRight][backToFront].toString());
             }
             System.out.print( "|");
             System.out.println("");
@@ -113,5 +135,54 @@ public class ChessBoard {
 
         }
     }
+    public int MovePiece(String origin, String destination){
 
+        ParseLocation(origin,mOrigin);
+       // System.out.println(mOrigin[0] + " " + mOrigin[1]);
+        ParseLocation(destination,mDestination);
+
+        mTiles[mDestination[0]][mDestination[1]].setPiece( mTiles[mOrigin[0]][mOrigin[1]].getPiece());
+        mTiles[mOrigin[0]][mOrigin[1]].setPiece(new EmptyTile());
+        return -1;
+    }
+    private boolean ParseLocation(String location, int[] coord){
+        String subString;
+        char alpha = location.charAt(0);
+        char num = location.charAt(1);
+        int yValue =num - 48;
+        int xValue =alpha - 97;
+        coord[0] =xValue;
+
+        //System.out.println(location);
+        //System.out.println(xValue + " " + yValue);
+        switch (yValue){
+            case 1:
+                coord[1] = 0;
+                break;
+            case 2:
+                coord[1] = 1;
+                break;
+            case 3:
+                coord[1] = 2;
+                break;
+            case 4:
+                coord[1] = 3;
+                break;
+            case 5:
+                coord[1] = 4;
+                break;
+            case 6:
+                coord[1] = 5;
+                break;
+            case 7:
+                coord[1] = 6;
+                break;
+            case 8:
+                coord[1] = 7;
+                break;
+            default:
+                return false;
+        }
+        return true;
+    }
 }
