@@ -87,6 +87,7 @@ public class ChessBoard {
 
             }
             System.out.println("");
+            /*
             for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
                 System.out.print("|");
                 System.out.print(mTiles[leftToRight][backToFront].toString());
@@ -94,6 +95,7 @@ public class ChessBoard {
             System.out.print( "|");
 
             System.out.println("");
+            */
             for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
                 // System.out.print(mTiles[leftToRight][backToFront].toString());
 
@@ -115,6 +117,7 @@ public class ChessBoard {
             }
             System.out.print( "|");
             System.out.println("");
+            /*
             for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
                 // System.out.print(mTiles[leftToRight][backToFront].toString());
 
@@ -124,6 +127,7 @@ public class ChessBoard {
             }
             System.out.print( "|");
             System.out.println("");
+            */
             for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
                 // System.out.print(mTiles[leftToRight][backToFront].toString());
 
@@ -140,18 +144,10 @@ public class ChessBoard {
         }
     }
     public int MovePiece(String origin, String destination){
-        ValidateMove(origin, destination);
-        // is anything already there
-        ChessPiece destPiece = mTiles[mDestination[0]][mDestination[1]].getPiece();
-        ChessPiece movingPiece = mTiles[mOrigin[0]][mOrigin[1]].getPiece();
-        System.out.println(destPiece.getColor());
-        System.out.println(movingPiece.getColor());
-        if (destPiece.getColor() == movingPiece.getColor()){
-            System.out.println(destPiece.toString());
-            return -1;
+        if (ValidateMove(origin, destination)){
+            mTiles[mDestination[0]][mDestination[1]].setPiece( mTiles[mOrigin[0]][mOrigin[1]].getPiece());
+            mTiles[mOrigin[0]][mOrigin[1]].setPiece(new EmptyTile());
         }
-        mTiles[mDestination[0]][mDestination[1]].setPiece( mTiles[mOrigin[0]][mOrigin[1]].getPiece());
-        mTiles[mOrigin[0]][mOrigin[1]].setPiece(new EmptyTile());
         return 0;
     }
     private boolean ParseLocation(String location, int[] coord){
@@ -198,8 +194,8 @@ public class ChessBoard {
         ParseLocation(origin,mOrigin);
         // System.out.println(mOrigin[0] + " " + mOrigin[1]);
         ParseLocation(destination,mDestination);
-       if ( mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove() == true){
-
+       if ( mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove(mOrigin, mDestination, mTiles) == true){
+            return true;
        }
         return false;
     }

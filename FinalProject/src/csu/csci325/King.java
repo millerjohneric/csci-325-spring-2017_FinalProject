@@ -23,6 +23,12 @@ public class King extends ChessPiece {
         }else{
             return "";
         }
+    }    public int getColor(){
+        return mColor;
     }
+    public boolean CanMove(int[] mOrigin, int[] mDestination, Tile[][] mTiles){
 
+
+        return false;
+    }
 }

@@ -24,4 +24,12 @@ public class Knight extends ChessPiece {
             return "";
         }
     }
+    public int getColor(){
+        return mColor;
+    }
+    public boolean CanMove(int[] mOrigin, int[] mDestination, Tile[][] mTiles){
+
+
+        return false;
+    }
 }
