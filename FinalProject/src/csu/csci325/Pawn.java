@@ -43,17 +43,17 @@ public class Pawn  extends ChessPiece{
             if (mOrigin[1] == 6 && mTiles [mOrigin[0]][mOrigin[1]].getPiece().getColor() == 1 ) {
                 if (mDestination[1] == 4 && mDestination[0] == mOrigin[0]
                         || mDestination[1] == 5 && mDestination[0] == mOrigin[0]) {
-                    System.out.println("Can Move");
+                    //System.out.println("Can Move");
                     return true;
                 }
-            }else if(mOrigin[1] == 1 && mTiles [mOrigin[0]][mOrigin[1]].getPiece().getColor() == 1 ) {
+            }else if(mOrigin[1] == 1 && mTiles [mOrigin[0]][mOrigin[1]].getPiece().getColor() == 0 ) {
                 if (mDestination[1] == 2 && mDestination[0] == mOrigin[0]
                         || mDestination[1] == 3 && mDestination[0] == mOrigin[0]) {
-                    System.out.println("Can Move");
+                    //System.out.println("Can Move");
                     return true;
                 }
             } else if (mDestination[1] == mOrigin[1] + directionOfPlay && mDestination[0] == mOrigin[0]) {
-                System.out.println("Can Move");
+                //System.out.println("Can Move");
                 return true;
             }
             // check for opposite color after checking for empty color
@@ -61,7 +61,7 @@ public class Pawn  extends ChessPiece{
                 mTiles [mDestination[0]] [mDestination[1]].getPiece().getColor() ){
             if ((mDestination[1] == mOrigin[1]  + directionOfPlay  && mDestination[0] == mOrigin[0] + 1)
                     ||(mDestination[1] == mOrigin[1]  + directionOfPlay  && mDestination[0] == mOrigin[0] - 1)) {
-                System.out.println("Can Move");
+                //System.out.println("Can Move");
                 return true;
             }
         }

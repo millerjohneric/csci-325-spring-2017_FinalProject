@@ -2,6 +2,10 @@ package csu.csci325;
 
 /**
  * Created by Millerjohneric on 1/27/2017.
+ *
+ *
+ *
+ * NEED TO ADD ERROR HANDLING IN CanMove
  */
 
 import java.util.Scanner;

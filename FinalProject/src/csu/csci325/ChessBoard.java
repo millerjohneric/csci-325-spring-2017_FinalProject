@@ -145,8 +145,12 @@ public class ChessBoard {
     }
     public int MovePiece(String origin, String destination){
         if (ValidateMove(origin, destination)){
+            if (KilledOpponent(mTiles[mOrigin[0]][mOrigin[1]].getPiece(),mTiles[mDestination[0]][mDestination[1]].getPiece())== true){
+
+            }
             mTiles[mDestination[0]][mDestination[1]].setPiece( mTiles[mOrigin[0]][mOrigin[1]].getPiece());
             mTiles[mOrigin[0]][mOrigin[1]].setPiece(new EmptyTile());
+
         }
         return 0;
     }
@@ -195,8 +199,17 @@ public class ChessBoard {
         // System.out.println(mOrigin[0] + " " + mOrigin[1]);
         ParseLocation(destination,mDestination);
        if ( mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove(mOrigin, mDestination, mTiles) == true){
-            return true;
+           System.out.println("can move");
+           return true;
        }
+        return false;
+    }
+    private boolean KilledOpponent(ChessPiece thisPlayer, ChessPiece opponentPlayer){
+        if (thisPlayer.getColor() != opponentPlayer.getColor() && opponentPlayer.getColor()!=-1){
+            System.out.println("Congratulations " + thisPlayer.toString()
+            + " You killed the " + opponentPlayer.toString());
+            return true;
+        }
         return false;
     }
 }
