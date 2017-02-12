@@ -14,21 +14,27 @@ public class Pawn  extends ChessPiece{
 
     }
     public Pawn(int color){
-        mColor = color;
+        super.setColor(color);
     }
     public String toString(){
-        if (mColor == 1) {
+        if (super.getColor() == 1) {
             return "Pawn W       ";
-        }else if (mColor == 0) {
+        }else if (super.getColor() == 0) {
             return "Pawn B       ";
         }else{
             return "";
         }
     }
-    public int getColor(){
-        return mColor;
-    }
-    public boolean CanMove(int[] mOrigin, int[] mDestination, Tile[][] mTiles){
+
+    /**
+     *
+     * @param mOrigin tile position to start from
+     * @param mDestination tile position to go to
+     * @param mTiles the board itself
+     * @return
+     */
+   //@Override
+    public boolean CantMove(int[] mOrigin, int[] mDestination, Tile[][] mTiles){
         // space is empty
         // is it on row 7, if so it can move to row 6 or 5
         // REMEMBER 1 to 8 for display but 0 to 7 for code

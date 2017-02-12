@@ -8,25 +8,25 @@ public class Rook  extends ChessPiece{
      * motion:
      *          up, down, left, right any value of spaces
      */
-    int mColor;
+    //int mColor;
     public Rook(){
 
     }
     public Rook(int color){
-        mColor = color;
+        super.setColor(color);
     }
     public String toString(){
-        if (mColor == 1) {
+        if (super.getColor() == 1) {
             return "Rook W       ";
-        }else if (mColor == 0) {
+        }else if (super.getColor() == 0) {
             return "Rook B       ";
         }else{
             return "";
         }
     }    public int getColor(){
-        return mColor;
+        return super.getColor();
     }
-    public boolean CanMove(int[] mOrigin, int[] mDestination, Tile[][] mTiles) {
+    public boolean CantMove(int[] mOrigin, int[] mDestination, Tile[][] mTiles) {
         // check each tile on way to destination
         // check direction of motion destination tile for same color (cant move)
         // check                                      for opponent

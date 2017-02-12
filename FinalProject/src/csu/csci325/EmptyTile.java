@@ -8,12 +8,12 @@ public class EmptyTile extends ChessPiece{
      * empty
      */
     public EmptyTile(){
-
+        super.setColor(-1);
     }
 
-    public int getColor(){
-        return -1;
-    }
+    //public int getColor(){
+    //    return -1;
+    //}
     public String toString(){
             return "             ";
     }

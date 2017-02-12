@@ -143,7 +143,10 @@ public class ChessBoard {
 
         }
     }
+
+
     public int MovePiece(String origin, String destination){
+        System.out.println("Move Piece");
         if (ValidateMove(origin, destination)){
             if (KilledOpponent(mTiles[mOrigin[0]][mOrigin[1]].getPiece(),mTiles[mDestination[0]][mDestination[1]].getPiece())== true){
 
@@ -156,6 +159,7 @@ public class ChessBoard {
     }
     private boolean ParseLocation(String location, int[] coord){
         String subString;
+        location = location.toLowerCase();
         char alpha = location.charAt(0);
         char num = location.charAt(1);
         int yValue =num - 48;
@@ -198,6 +202,8 @@ public class ChessBoard {
         ParseLocation(origin,mOrigin);
         // System.out.println(mOrigin[0] + " " + mOrigin[1]);
         ParseLocation(destination,mDestination);
+        System.out.println("about to validate CanMove");
+       // System.out.println(mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove(mOrigin, mDestination, mTiles));
        if ( mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove(mOrigin, mDestination, mTiles) == true){
            System.out.println("can move");
            return true;
