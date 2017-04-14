@@ -15,6 +15,7 @@ public class Main_PlayChess {
     private static boolean WHITE = true;
     private static boolean BLACK = false;
     public static void main(String[] args) {
+
         ChessBoard gameBoard = new ChessBoard();
         gameBoard.Set();
         gameBoard.Display();

@@ -12,6 +12,7 @@ public class Queen  extends ChessPiece{
     public Queen(){
 
     }
+
     public Queen(int color){
         super.setColor(color);
     }
