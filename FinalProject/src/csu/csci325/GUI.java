@@ -12,14 +12,24 @@ import javafx.stage.Stage;
  * Created by mille on 4/13/2017.
  */
 public class GUI extends Application {
-    Group root;
-    Scene theScene;
+    static Group root;
+    static Scene theScene;
     Canvas canvas;
     GraphicsContext gc;
-    Image bgw;
-    Image bgb ;
-    Image sun ;
-    Image space;
+    Image wbg;
+    Image wpawn ;
+    Image wrook ;
+    Image wbishop ;
+    Image wknight ;
+    Image wking ;
+    Image wqueen ;
+    Image bbg;
+    Image bpawn ;
+    Image brook ;
+    Image bbishop ;
+    Image bknight ;
+    Image bking ;
+    Image bqueen ;
     @Override
     public void start(Stage primaryStage) throws Exception {
         root = new Group();
@@ -34,93 +44,106 @@ public class GUI extends Application {
         ChessBoard gameBoard = new ChessBoard();
         gameBoard.Set();
         //gameBoard.Display();
-        String origin;
-        String destination;
-        origin = "a2";
-        destination = "a3";
-        gameBoard.MovePiece( origin,  destination);
+        //String origin;
+        //String destination;
+        //origin = "a2";
+        //destination = "a3";
+        //gameBoard.MovePiece( origin,  destination);
 
-        bgw = new Image("DSC_7861.gif", 110, 110, true, false);
 
-        bgb = new Image("DSC_7859.gif", 130, 130, true, false);
-        sun = new Image("DSC_7863.gif", 100, 100, true, false);
-        space = new Image("DSC_7864.gif", 100, 100, true, false);
+        bbg = new Image("bbg.gif", 130, 130, true, false);
+        bpawn  = new Image("bpawn.gif", 100, 100, true, false);
+        brook  = new Image("brook.gif", 100, 100, true, false);
+        bbishop  = new Image("bbishop.gif", 100, 100, true, false);
+        bknight  = new Image("bknight.gif", 100, 100, true, false);
+        bking  = new Image("bking.gif", 100, 100, true, false);
+        bqueen = new Image("bqueen.gif", 100, 100, true, false);
 
-        gc.drawImage(bgw, 0, 0);
-        gc.drawImage(bgb, 100, 0);
-        gc.drawImage(bgw, 200, 0);
-        gc.drawImage(bgb, 300, 0);
-        gc.drawImage(bgw, 400, 0);
-        gc.drawImage(bgb, 500, 0);
-        gc.drawImage(bgw, 600, 0);
-        gc.drawImage(bgb, 700, 0);
-        gc.drawImage(bgb, 0, 100);
-        gc.drawImage(bgw, 100, 100);
-        gc.drawImage(bgb, 200, 100);
-        gc.drawImage(bgw, 300, 100);
-        gc.drawImage(bgb, 400, 100);
-        gc.drawImage(bgw, 500, 100);
-        gc.drawImage(bgb, 600, 100);
-        gc.drawImage(bgw, 700, 100);
 
-        gc.drawImage(bgw, 0, 200);
-        gc.drawImage(bgb, 100, 200);
-        gc.drawImage(bgw, 200, 200);
-        gc.drawImage(bgb, 300, 200);
-        gc.drawImage(bgw, 400, 200);
-        gc.drawImage(bgb, 500, 200);
-        gc.drawImage(bgw, 600, 200);
-        gc.drawImage(bgb, 700, 200);
-        gc.drawImage(bgb, 0, 300);
-        gc.drawImage(bgw, 100, 300);
-        gc.drawImage(bgb, 200, 300);
-        gc.drawImage(bgw, 300, 300);
-        gc.drawImage(bgb, 400, 300);
-        gc.drawImage(bgw, 500, 300);
-        gc.drawImage(bgb, 600, 300);
-        gc.drawImage(bgw, 700, 300);
+        wbg = new Image("wbg.gif", 110, 110, true, false);
+        wpawn  = new Image("wpawn.gif", 100, 100, true, false);
+        wrook  = new Image("wrook.gif", 100, 100, true, false);
+        wbishop  = new Image("wbishop.gif", 100, 100, true, false);
+        wknight  = new Image("wknight.gif", 100, 100, true, false);
+        wking  = new Image("wking.gif", 100, 100, true, false);
+        wqueen = new Image("wqueen.gif", 100, 100, true, false);
+        CreateBoard();
 
-        gc.drawImage(bgw, 0, 400);
-        gc.drawImage(bgb, 100, 400);
-        gc.drawImage(bgw, 200, 400);
-        gc.drawImage(bgb, 300, 400);
-        gc.drawImage(bgw, 400, 400);
-        gc.drawImage(bgb, 500, 400);
-        gc.drawImage(bgw, 600, 400);
-        gc.drawImage(bgb, 700, 400);
-        gc.drawImage(bgb, 0, 500);
-        gc.drawImage(bgw, 100, 500);
-        gc.drawImage(bgb, 200, 500);
-        gc.drawImage(bgw, 300, 500);
-        gc.drawImage(bgb, 400, 500);
-        gc.drawImage(bgw, 500, 500);
-        gc.drawImage(bgb, 600, 500);
-        gc.drawImage(bgw, 700, 500);
-
-        gc.drawImage(bgw, 0, 600);
-        gc.drawImage(bgb, 100, 600);
-        gc.drawImage(bgw, 200, 600);
-        gc.drawImage(bgb, 300, 600);
-        gc.drawImage(bgw, 400, 600);
-        gc.drawImage(bgb, 500, 600);
-        gc.drawImage(bgw, 600, 600);
-        gc.drawImage(bgb, 700, 600);
-        gc.drawImage(bgb, 0, 700);
-        gc.drawImage(bgw, 100, 700);
-        gc.drawImage(bgb, 200, 700);
-        gc.drawImage(bgw, 300, 700);
-        gc.drawImage(bgb, 400, 700);
-        gc.drawImage(bgw, 500, 700);
-        gc.drawImage(bgb, 600, 700);
-        gc.drawImage(bgw, 700, 700);
-        SetThis(sun, 0, 0);
-        SetThis(space, 400, 0);
         primaryStage.show();
     }
     public boolean SetThis(Image thisImage, int x, int y){
 
         gc.drawImage(thisImage, x, y);
         return true;
+    }
+    public void CreateBoard(){
+        gc.drawImage(wbg, 0, 0);
+        gc.drawImage(bbg, 100, 0);
+        gc.drawImage(wbg, 200, 0);
+        gc.drawImage(bbg, 300, 0);
+        gc.drawImage(wbg, 400, 0);
+        gc.drawImage(bbg, 500, 0);
+        gc.drawImage(wbg, 600, 0);
+        gc.drawImage(bbg, 700, 0);
+        gc.drawImage(bbg, 0, 100);
+        gc.drawImage(wbg, 100, 100);
+        gc.drawImage(bbg, 200, 100);
+        gc.drawImage(wbg, 300, 100);
+        gc.drawImage(bbg, 400, 100);
+        gc.drawImage(wbg, 500, 100);
+        gc.drawImage(bbg, 600, 100);
+        gc.drawImage(wbg, 700, 100);
+
+        gc.drawImage(wbg, 0, 200);
+        gc.drawImage(bbg, 100, 200);
+        gc.drawImage(wbg, 200, 200);
+        gc.drawImage(bbg, 300, 200);
+        gc.drawImage(wbg, 400, 200);
+        gc.drawImage(bbg, 500, 200);
+        gc.drawImage(wbg, 600, 200);
+        gc.drawImage(bbg, 700, 200);
+        gc.drawImage(bbg, 0, 300);
+        gc.drawImage(wbg, 100, 300);
+        gc.drawImage(bbg, 200, 300);
+        gc.drawImage(wbg, 300, 300);
+        gc.drawImage(bbg, 400, 300);
+        gc.drawImage(wbg, 500, 300);
+        gc.drawImage(bbg, 600, 300);
+        gc.drawImage(wbg, 700, 300);
+
+        gc.drawImage(wbg, 0, 400);
+        gc.drawImage(bbg, 100, 400);
+        gc.drawImage(wbg, 200, 400);
+        gc.drawImage(bbg, 300, 400);
+        gc.drawImage(wbg, 400, 400);
+        gc.drawImage(bbg, 500, 400);
+        gc.drawImage(wbg, 600, 400);
+        gc.drawImage(bbg, 700, 400);
+        gc.drawImage(bbg, 0, 500);
+        gc.drawImage(wbg, 100, 500);
+        gc.drawImage(bbg, 200, 500);
+        gc.drawImage(wbg, 300, 500);
+        gc.drawImage(bbg, 400, 500);
+        gc.drawImage(wbg, 500, 500);
+        gc.drawImage(bbg, 600, 500);
+        gc.drawImage(wbg, 700, 500);
+
+        gc.drawImage(wbg, 0, 600);
+        gc.drawImage(bbg, 100, 600);
+        gc.drawImage(wbg, 200, 600);
+        gc.drawImage(bbg, 300, 600);
+        gc.drawImage(wbg, 400, 600);
+        gc.drawImage(bbg, 500, 600);
+        gc.drawImage(wbg, 600, 600);
+        gc.drawImage(bbg, 700, 600);
+        gc.drawImage(bbg, 0, 700);
+        gc.drawImage(wbg, 100, 700);
+        gc.drawImage(bbg, 200, 700);
+        gc.drawImage(wbg, 300, 700);
+        gc.drawImage(bbg, 400, 700);
+        gc.drawImage(wbg, 500, 700);
+        gc.drawImage(bbg, 600, 700);
+        gc.drawImage(wbg, 700, 700);
     }
 
 }
