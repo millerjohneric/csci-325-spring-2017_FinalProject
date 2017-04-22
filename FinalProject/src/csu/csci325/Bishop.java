@@ -11,24 +11,25 @@ public class Bishop  extends ChessPiece{
     // color
     // tileColor
 
-    int mColor;
+    //int mColor;
     public Bishop(){
 
     }
     public Bishop(int color){
-        mColor = color;
+        super.setColor(color);
     }
 
     public String toString(){
-        if (mColor == 1) {
-            return "Bishop W       ";
-        }else if (mColor == 0) {
-            return "Bishop B       ";
+        if (super.getColor() == 1) {
+            return "Bishop W     ";
+        }else if (super.getColor() == 0) {
+            return "Bishop B     ";
         }else{
             return "";
         }
     }
-    public boolean CanMove(){
-        return false;
-    }
+    //public int getColor(){
+    //    return super.getColor();
+   // }
+
 }

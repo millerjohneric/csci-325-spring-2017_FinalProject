@@ -8,21 +8,28 @@ public class King extends ChessPiece {
      * motion:  CANNOT MOVE INTO CHECK
      *          up, down, left, right, diagonal one space only
      */
-    int mColor;
+   // int mColor;
     public King(){
 
     }
     public King(int color){
-        mColor = color;
+        super.setColor(color);
     }
     public String toString(){
-        if (mColor == 1) {
+        if (super.getColor() == 1) {
             return "King W       ";
-        }else if (mColor == 0) {
+        }else if (super.getColor() == 0) {
             return "King B       ";
         }else{
             return "";
         }
     }
+    //public int getColor(){
+    //    return super.getColor();
+    //}
+    public boolean CantMove(int[] mOrigin, int[] mDestination, Tile[][] mTiles){
 
+
+        return false;
+    }
 }
