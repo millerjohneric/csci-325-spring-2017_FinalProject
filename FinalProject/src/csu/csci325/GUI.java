@@ -31,45 +31,18 @@ public class GUI extends Application {
     Image bking ;
     Image bqueen ;
 
-    private static GUI mGUI;
-    public static GUI getGUI() {
-        if (mGUI == null) {
-            mGUI = new GUI();
-        }
-        return mGUI;
-    }
-    @Override
     public void start(Stage primaryStage) throws Exception {
         root = new Group();
         theScene = new Scene(root);
         primaryStage.setScene(theScene);
 
-        canvas = new Canvas(800, 800);
+        canvas = new Canvas(1600, 800);
         root.getChildren().add(canvas);
 
         gc = canvas.getGraphicsContext2D();
 
-        ChessBoard gameBoard = new ChessBoard();
-        gameBoard.Set();
-        gameBoard.Display();
 
-
-        bbg = new Image("bbg.gif", 130, 130, true, false);
-        bpawn  = new Image("bpawn.gif", 100, 100, true, false);
-        brook  = new Image("brook.gif", 100, 100, true, false);
-        bbishop  = new Image("bbishop.gif", 100, 100, true, false);
-        bknight  = new Image("bknight.gif", 100, 100, true, false);
-        bking  = new Image("bking.gif", 100, 100, true, false);
-        bqueen = new Image("bqueen.gif", 100, 100, true, false);
-
-
-        wbg = new Image("wbg.gif", 110, 110, true, false);
-        wpawn  = new Image("wpawn.gif", 100, 100, true, false);
-        wrook  = new Image("wrook.gif", 100, 100, true, false);
-        wbishop  = new Image("wbishop.gif", 100, 100, true, false);
-        wknight  = new Image("wknight.gif", 100, 100, true, false);
-        wking  = new Image("wking.gif", 100, 100, true, false);
-        wqueen = new Image("wqueen.gif", 100, 100, true, false);
+        CreatePieces();
         CreateBoard();
 
         primaryStage.show();
@@ -77,13 +50,16 @@ public class GUI extends Application {
         String destination;
         origin = "a2";
         destination = "a3";
+        ChessBoard gameBoard = new ChessBoard();
+        gameBoard.SetGui(this);
+        gameBoard.Set();
+        gameBoard.Display();
         gameBoard.MovePiece( origin,  destination);
-        gameBoard.VividDisplay(getGUI());
     }
     public boolean SetThis(Image thisImage, int x, int y){
 
         gc.drawImage(thisImage, x, y);
-        return true;
+       return true;
     }
     public void CreateBoard(){
         gc.drawImage(wbg, 0, 0);
@@ -157,5 +133,26 @@ public class GUI extends Application {
     public static void main(String[] args) {
         Application.launch(args);
     }
+    public void CreatePieces(){
+
+        bbg = new Image("bbg.gif", 130, 130, true, false);
+        bpawn  = new Image("bpawn.gif", 100, 100, true, false);
+        brook  = new Image("brook.gif", 100, 100, true, false);
+        bbishop  = new Image("bbishop.gif", 100, 100, true, false);
+        bknight  = new Image("bknight.gif", 100, 100, true, false);
+        bking  = new Image("bking.gif", 100, 100, true, false);
+        bqueen = new Image("bqueen.gif", 100, 100, true, false);
+
+
+        wbg = new Image("wbg.gif", 110, 110, true, false);
+        wpawn  = new Image("wpawn.gif", 100, 100, true, false);
+        wrook  = new Image("wrook.gif", 100, 100, true, false);
+        wbishop  = new Image("wbishop.gif", 100, 100, true, false);
+        wknight  = new Image("wknight.gif", 100, 100, true, false);
+        wking  = new Image("wking.gif", 100, 100, true, false);
+        wqueen = new Image("wqueen.gif", 100, 100, true, false);
+
+    }
+
 
 }

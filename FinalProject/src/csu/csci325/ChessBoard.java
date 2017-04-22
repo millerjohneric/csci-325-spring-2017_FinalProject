@@ -88,9 +88,53 @@ public class ChessBoard {
 
         return false;
     }
-    public void VividDisplay(GUI mGUI){
-        //mGUI.CreateBoard();
-        //mGUI.SetThis(mGUI.bbishop,600,400);
+    public void VividDisplay(){
+        for (int backToFront = 0; backToFront < SIDELENGTH; backToFront++) {
+            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++) {
+                //System.out.println( mTiles[leftToRight][backToFront].getPiece().toString());
+                switch (mTiles[leftToRight][backToFront].getPiece().toString()){
+                    case "Pawn W":
+                        mGUI.SetThis(mGUI.wpawn,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Rook W":
+                        mGUI.SetThis(mGUI.wrook,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Knight W":
+                        mGUI.SetThis(mGUI.wknight,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Bishop W":
+                        mGUI.SetThis(mGUI.wbishop,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "King W":
+                        mGUI.SetThis(mGUI.wking,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Queen W":
+                        mGUI.SetThis(mGUI.wqueen,leftToRight * 75,backToFront * 75);
+                        break;
+
+                    case "Pawn B":
+                        mGUI.SetThis(mGUI.bpawn,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Rook B":
+                        mGUI.SetThis(mGUI.brook,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Knight B":
+                        mGUI.SetThis(mGUI.bknight,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Bishop B":
+                        mGUI.SetThis(mGUI.bbishop,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "King B":
+                        mGUI.SetThis(mGUI.bking,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Queen B":
+                        mGUI.SetThis(mGUI.bqueen,leftToRight * 75,backToFront * 75);
+                        break;
+                }
+
+            }
+        }
+
     }
     public void Display(){
         //tiles = new Tile[SIDELENGTH][SIDELENGTH];
@@ -155,7 +199,7 @@ public class ChessBoard {
             System.out.print("______________________");
 
         }
-        //this.VividDisplay();
+        VividDisplay();
     }
 
 
