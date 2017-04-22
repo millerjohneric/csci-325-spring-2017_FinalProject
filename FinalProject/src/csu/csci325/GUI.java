@@ -30,6 +30,14 @@ public class GUI extends Application {
     Image bknight ;
     Image bking ;
     Image bqueen ;
+
+    private static GUI mGUI;
+    public static GUI getGUI() {
+        if (mGUI == null) {
+            mGUI = new GUI();
+        }
+        return mGUI;
+    }
     @Override
     public void start(Stage primaryStage) throws Exception {
         root = new Group();
@@ -43,12 +51,7 @@ public class GUI extends Application {
 
         ChessBoard gameBoard = new ChessBoard();
         gameBoard.Set();
-        //gameBoard.Display();
-        //String origin;
-        //String destination;
-        //origin = "a2";
-        //destination = "a3";
-        //gameBoard.MovePiece( origin,  destination);
+        gameBoard.Display();
 
 
         bbg = new Image("bbg.gif", 130, 130, true, false);
@@ -70,6 +73,12 @@ public class GUI extends Application {
         CreateBoard();
 
         primaryStage.show();
+        String origin;
+        String destination;
+        origin = "a2";
+        destination = "a3";
+        gameBoard.MovePiece( origin,  destination);
+        gameBoard.VividDisplay(getGUI());
     }
     public boolean SetThis(Image thisImage, int x, int y){
 
@@ -144,6 +153,9 @@ public class GUI extends Application {
         gc.drawImage(wbg, 500, 700);
         gc.drawImage(bbg, 600, 700);
         gc.drawImage(wbg, 700, 700);
+    }
+    public static void main(String[] args) {
+        Application.launch(args);
     }
 
 }

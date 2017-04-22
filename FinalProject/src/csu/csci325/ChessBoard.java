@@ -16,7 +16,7 @@ public class ChessBoard {
     private int[] mOrigin;
     private int[] mDestination;
 
-    private static GUI mGUI;
+    public GUI mGUI;
     public ChessBoard(){
         mTiles = new Tile[SIDELENGTH][SIDELENGTH];
         mBlackOffBoard = new Tile[16];
@@ -26,7 +26,14 @@ public class ChessBoard {
         int result;
         mOrigin[0] = 9;
         mOrigin[1] = 9;
-        GUI vivid = new GUI();
+        //GUI vivid = new GUI();
+       // Stage vividStage = new Stage();
+       // try{
+        //    vivid.start(vividStage);
+        //    vivid.CreateBoard();
+        //}catch (Exception e){
+
+        //}
         for (int backToFront = 0; backToFront < SIDELENGTH; backToFront++) {
             for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++) {
                 mTiles[leftToRight][backToFront] = new Tile();
@@ -81,9 +88,9 @@ public class ChessBoard {
 
         return false;
     }
-    public void VividDisplay(){
-        mGUI.CreateBoard();
-        mGUI.SetThis(mGUI.bbishop,600,400);
+    public void VividDisplay(GUI mGUI){
+        //mGUI.CreateBoard();
+        //mGUI.SetThis(mGUI.bbishop,600,400);
     }
     public void Display(){
         //tiles = new Tile[SIDELENGTH][SIDELENGTH];
