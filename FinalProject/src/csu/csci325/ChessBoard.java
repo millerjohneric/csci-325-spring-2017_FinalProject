@@ -1,9 +1,20 @@
 package csu.csci325;
 
+
 /**
  * Created by Millerjohneric on 1/27/2017.
  */
+
 public class ChessBoard {
+
+    enum PIECE {
+        pawnW, rookW, knightW, bishopW, kingW, queenW,
+        pawnB, rookB, knightB, bishopB, kingB, queenB,
+
+    }
+
+    PIECE piece;
+
     // white on right bottom corner
     // left to right is a to h
     // back to front is 8 to 1
@@ -15,7 +26,11 @@ public class ChessBoard {
     public static Tile[] mWhiteOffBoard;
     private int[] mOrigin;
     private int[] mDestination;
+
+    public GUI2 mGUI;
+
     public ChessBoard(){
+        this.piece = piece;
         mTiles = new Tile[SIDELENGTH][SIDELENGTH];
         mBlackOffBoard = new Tile[16];
         mWhiteOffBoard = new Tile[16];
@@ -75,85 +90,89 @@ public class ChessBoard {
         mTiles[7][0].setPiece(new Rook(BLACK));
         return false;
     }
+
     public boolean Clear(){
 
         return false;
     }
-    public void Display(){
-        //tiles = new Tile[SIDELENGTH][SIDELENGTH];
-        for (int backToFront = 0; backToFront < SIDELENGTH; backToFront++){
-            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
-                System.out.print("______________________");
 
+
+    public void VividDisplay(){
+
+        for (int backToFront = 0; backToFront < SIDELENGTH; backToFront++) {
+            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++) {
+                //System.out.println( mTiles[leftToRight][backToFront].getPiece().toString());
+                piece = PIECE.valueOf(mTiles[leftToRight][backToFront].getPiece().toString());
+                switch (piece){
+                    case pawnW:
+                        mGUI.SetThis(mGUI.wpawn,leftToRight * 75,backToFront * 75);
+                        break;
+                    case rookW:
+                        mGUI.SetThis(mGUI.wrook,leftToRight * 75,backToFront * 75);
+                        break;
+                    case knightW:
+                        mGUI.SetThis(mGUI.wknight,leftToRight * 75,backToFront * 75);
+                        break;
+                    case bishopW:
+                        mGUI.SetThis(mGUI.wbishop,leftToRight * 75,backToFront * 75);
+                        break;
+                    case kingW:
+                        mGUI.SetThis(mGUI.wking,leftToRight * 75,backToFront * 75);
+                        break;
+                    case queenW:
+                        mGUI.SetThis(mGUI.wqueen,leftToRight * 75,backToFront * 75);
+                        break;
+                    case pawnB:
+                        mGUI.SetThis(mGUI.bpawn,leftToRight * 75,backToFront * 75);
+                        break;
+                    case rookB:
+                        mGUI.SetThis(mGUI.brook,leftToRight * 75,backToFront * 75);
+                        break;
+                    case knightB:
+                        mGUI.SetThis(mGUI.bknight,leftToRight * 75,backToFront * 75);
+                        break;
+                    case bishopB:
+                        mGUI.SetThis(mGUI.bbishop,leftToRight * 75,backToFront * 75);
+                        break;
+                    case kingB:
+                        mGUI.SetThis(mGUI.bking,leftToRight * 75,backToFront * 75);
+                        break;
+                    case queenB:
+                        mGUI.SetThis(mGUI.bqueen,leftToRight * 75,backToFront * 75);
+                        break;
+
+                }
             }
-            System.out.println("");
-            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
-                System.out.print("|");
-                System.out.print(mTiles[leftToRight][backToFront].toString());
-            }
-            System.out.print( "|");
 
-            System.out.println("");
-            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
-                // System.out.print(mTiles[leftToRight][backToFront].toString());
+         }
 
-                //System.out.println("");
-                System.out.print( "|");//                     ");
-                System.out.print(mTiles[leftToRight][backToFront].toString());
-            }
-            System.out.print( "|");
-            System.out.println("");
-            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
-                // System.out.print(mTiles[leftToRight][backToFront].toString());
-
-                //System.out.println("");
-                int temp = 97 + leftToRight;
-                int temp2 = 1 + backToFront;
-                Character.toString((char) temp);
-                System.out.print( "|" + Character.toString((char) temp) + temp2 +
-                         "     " + mTiles[leftToRight][backToFront].getPiece().toString() + " ");
-            }
-            System.out.print( "|");
-            System.out.println("");
-            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
-                // System.out.print(mTiles[leftToRight][backToFront].toString());
-
-                //System.out.println("");
-                System.out.print( "|");//                     ");
-                System.out.print(mTiles[leftToRight][backToFront].toString());
-            }
-            System.out.print( "|");
-            System.out.println("");
-            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
-                // System.out.print(mTiles[leftToRight][backToFront].toString());
-
-                //System.out.println("");
-                System.out.print( "|");//                     ");
-                System.out.print(mTiles[leftToRight][backToFront].toString());
-            }
-            System.out.print( "|");
-            System.out.println("");
-        }
-        for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
-            System.out.print("______________________");
-
-        }
     }
+
+
+    public void Display(){
+
+        System.out.print("______________________");
+        VividDisplay();
+
+    }
+
     public int MovePiece(String origin, String destination){
-        ValidateMove(origin, destination);
-        // is anything already there
-        ChessPiece destPiece = mTiles[mDestination[0]][mDestination[1]].getPiece();
-        ChessPiece movingPiece = mTiles[mOrigin[0]][mOrigin[1]].getPiece();
-        System.out.println(destPiece.getColor());
-        System.out.println(movingPiece.getColor());
-        if (destPiece.getColor() == movingPiece.getColor()){
-            System.out.println(destPiece.toString());
-            return -1;
+
+        System.out.println("Move Piece");
+
+        if (ValidateMove(origin, destination)){
+
+            if (KilledOpponent(mTiles[mOrigin[0]][mOrigin[1]].getPiece(),mTiles[mDestination[0]][mDestination[1]].getPiece())== true){
+
+            }
+
+            mTiles[mDestination[0]][mDestination[1]].setPiece( mTiles[mOrigin[0]][mOrigin[1]].getPiece());
+            mTiles[mOrigin[0]][mOrigin[1]].setPiece(new EmptyTile());
         }
-        mTiles[mDestination[0]][mDestination[1]].setPiece( mTiles[mOrigin[0]][mOrigin[1]].getPiece());
-        mTiles[mOrigin[0]][mOrigin[1]].setPiece(new EmptyTile());
+
         return 0;
     }
+
     private boolean ParseLocation(String location, int[] coord){
         String subString;
         char alpha = location.charAt(0);
@@ -194,13 +213,36 @@ public class ChessBoard {
         }
         return true;
     }
+
     private boolean ValidateMove(String origin, String destination){
         ParseLocation(origin,mOrigin);
+
         // System.out.println(mOrigin[0] + " " + mOrigin[1]);
         ParseLocation(destination,mDestination);
-       if ( mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove() == true){
-
-       }
+        System.out.println("about to validate CanMove");
+        // System.out.println(mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove(mOrigin, mDestination, mTiles));
+        if ( mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove(mOrigin, mDestination, mTiles)){
+            System.out.println("can move");
+            return true;
+        }
         return false;
+
+    }
+
+
+    private boolean KilledOpponent(ChessPiece thisPlayer, ChessPiece opponentPlayer){
+
+        if (thisPlayer.getColor() != opponentPlayer.getColor() && opponentPlayer.getColor()!=-1){
+            System.out.println("Congratulations " + thisPlayer.toString()
+                    + " You killed the " + opponentPlayer.toString());
+            return true;
+        }
+        return false;
+    }
+
+
+    public boolean SetGui(GUI2 vividBoard){
+        mGUI=vividBoard;
+        return true;
     }
 }

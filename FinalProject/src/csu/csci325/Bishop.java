@@ -28,7 +28,7 @@ public class Bishop  extends ChessPiece{
             return "";
         }
     }
-    public boolean CanMove(){
+    public boolean CanMove(int[] mOrigin, int[] mDestination, Tile[][] mTiles){
         return false;
     }
 }

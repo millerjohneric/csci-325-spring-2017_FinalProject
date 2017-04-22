@@ -24,7 +24,7 @@ public class ChessPiece {
     }
 
 
-    public boolean CanMove() {
+    public boolean CanMove(int[] mOrigin, int[] mDestination, Tile[][] mTiles) {
         return false;
     }
 }
