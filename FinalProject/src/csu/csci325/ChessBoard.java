@@ -13,7 +13,7 @@ public class ChessBoard {
 
     }
 
-    PIECE piece;
+    PIECE piece = PIECE.pawnW;
 
     // white on right bottom corner
     // left to right is a to h
@@ -39,6 +39,7 @@ public class ChessBoard {
         int result;
         mOrigin[0] = 9;
         mOrigin[1] = 9;
+
 
         for (int backToFront = 0; backToFront < SIDELENGTH; backToFront++) {
             for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++) {
