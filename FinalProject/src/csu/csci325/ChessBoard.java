@@ -27,8 +27,12 @@ public class ChessBoard {
     private int[] mOrigin;
     private int[] mDestination;
 
+<<<<<<< HEAD
     public GUI2 mGUI;
 
+=======
+    public GUI mGUI;
+>>>>>>> refs/remotes/origin/master
     public ChessBoard(){
         this.piece = piece;
         mTiles = new Tile[SIDELENGTH][SIDELENGTH];
@@ -39,7 +43,14 @@ public class ChessBoard {
         int result;
         mOrigin[0] = 9;
         mOrigin[1] = 9;
+        //GUI vivid = new GUI();
+       // Stage vividStage = new Stage();
+       // try{
+        //    vivid.start(vividStage);
+        //    vivid.CreateBoard();
+        //}catch (Exception e){
 
+        //}
         for (int backToFront = 0; backToFront < SIDELENGTH; backToFront++) {
             for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++) {
                 mTiles[leftToRight][backToFront] = new Tile();
@@ -95,6 +106,7 @@ public class ChessBoard {
 
         return false;
     }
+<<<<<<< HEAD
 
 
     public void VividDisplay(){
@@ -142,8 +154,114 @@ public class ChessBoard {
                         break;
 
                 }
+=======
+    public void VividDisplay(){
+        for (int backToFront = 0; backToFront < SIDELENGTH; backToFront++) {
+            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++) {
+                //System.out.println( mTiles[leftToRight][backToFront].getPiece().toString());
+                switch (mTiles[leftToRight][backToFront].getPiece().toString()){
+                    case "Pawn W":
+                        mGUI.SetThis(mGUI.wpawn,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Rook W":
+                        mGUI.SetThis(mGUI.wrook,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Knight W":
+                        mGUI.SetThis(mGUI.wknight,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Bishop W":
+                        mGUI.SetThis(mGUI.wbishop,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "King W":
+                        mGUI.SetThis(mGUI.wking,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Queen W":
+                        mGUI.SetThis(mGUI.wqueen,leftToRight * 75,backToFront * 75);
+                        break;
+
+                    case "Pawn B":
+                        mGUI.SetThis(mGUI.bpawn,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Rook B":
+                        mGUI.SetThis(mGUI.brook,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Knight B":
+                        mGUI.SetThis(mGUI.bknight,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Bishop B":
+                        mGUI.SetThis(mGUI.bbishop,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "King B":
+                        mGUI.SetThis(mGUI.bking,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Queen B":
+                        mGUI.SetThis(mGUI.bqueen,leftToRight * 75,backToFront * 75);
+                        break;
+                }
+
+            }
+        }
+
+    }
+    public void Display(){
+        //tiles = new Tile[SIDELENGTH][SIDELENGTH];
+        for (int backToFront = 0; backToFront < SIDELENGTH; backToFront++){
+            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
+                System.out.print("______________________");
+
+            }
+            System.out.println("");
+            /*
+            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
+                System.out.print("|");
+                System.out.print(mTiles[leftToRight][backToFront].toString());
+            }
+            System.out.print( "|");
+
+            System.out.println("");
+            */
+            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
+                // System.out.print(mTiles[leftToRight][backToFront].toString());
+
+                //System.out.println("");
+                System.out.print( "|");//                     ");
+                System.out.print(mTiles[leftToRight][backToFront].toString());
+            }
+            System.out.print( "|");
+            System.out.println("");
+            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
+                // System.out.print(mTiles[leftToRight][backToFront].toString());
+
+                //System.out.println("");
+                int temp = 97 + leftToRight;
+                int temp2 = 1 + backToFront;
+                Character.toString((char) temp);
+                System.out.print( "|" + Character.toString((char) temp) + temp2 +
+                         "     " + mTiles[leftToRight][backToFront].getPiece().toString() + " ");
+            }
+            System.out.print( "|");
+            System.out.println("");
+            /*
+            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
+                // System.out.print(mTiles[leftToRight][backToFront].toString());
+
+                //System.out.println("");
+                System.out.print( "|");//                     ");
+                System.out.print(mTiles[leftToRight][backToFront].toString());
+            }
+            System.out.print( "|");
+            System.out.println("");
+            */
+            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
+                // System.out.print(mTiles[leftToRight][backToFront].toString());
+
+                //System.out.println("");
+                System.out.print( "|");//                     ");
+                System.out.print(mTiles[leftToRight][backToFront].toString());
+>>>>>>> refs/remotes/origin/master
             }
 
+<<<<<<< HEAD
          }
 
     }
@@ -170,11 +288,29 @@ public class ChessBoard {
             mTiles[mOrigin[0]][mOrigin[1]].setPiece(new EmptyTile());
         }
 
+=======
+        }
+        VividDisplay();
+    }
+
+
+    public int MovePiece(String origin, String destination){
+        System.out.println("Move Piece");
+        if (ValidateMove(origin, destination)){
+            if (KilledOpponent(mTiles[mOrigin[0]][mOrigin[1]].getPiece(),mTiles[mDestination[0]][mDestination[1]].getPiece())== true){
+
+            }
+            mTiles[mDestination[0]][mDestination[1]].setPiece( mTiles[mOrigin[0]][mOrigin[1]].getPiece());
+            mTiles[mOrigin[0]][mOrigin[1]].setPiece(new EmptyTile());
+
+        }
+>>>>>>> refs/remotes/origin/master
         return 0;
     }
 
     private boolean ParseLocation(String location, int[] coord){
         String subString;
+        location = location.toLowerCase();
         char alpha = location.charAt(0);
         char num = location.charAt(1);
         int yValue =num - 48;
@@ -220,6 +356,7 @@ public class ChessBoard {
         // System.out.println(mOrigin[0] + " " + mOrigin[1]);
         ParseLocation(destination,mDestination);
         System.out.println("about to validate CanMove");
+<<<<<<< HEAD
         // System.out.println(mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove(mOrigin, mDestination, mTiles));
         if ( mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove(mOrigin, mDestination, mTiles)){
             System.out.println("can move");
@@ -242,6 +379,24 @@ public class ChessBoard {
 
 
     public boolean SetGui(GUI2 vividBoard){
+=======
+       // System.out.println(mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove(mOrigin, mDestination, mTiles));
+       if ( mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove(mOrigin, mDestination, mTiles) == true){
+           System.out.println("can move");
+           return true;
+       }
+        return false;
+    }
+    private boolean KilledOpponent(ChessPiece thisPlayer, ChessPiece opponentPlayer){
+        if (thisPlayer.getColor() != opponentPlayer.getColor() && opponentPlayer.getColor()!=-1){
+            System.out.println("Congratulations " + thisPlayer.toString()
+            + " You killed the " + opponentPlayer.toString());
+            return true;
+        }
+        return false;
+    }
+    public boolean SetGui(GUI vividBoard){
+>>>>>>> refs/remotes/origin/master
         mGUI=vividBoard;
         return true;
     }
