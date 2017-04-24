@@ -1,9 +1,20 @@
 package csu.csci325;
 
+
 /**
  * Created by Millerjohneric on 1/27/2017.
  */
+
 public class ChessBoard {
+
+    enum PIECE {
+        pawnW, rookW, knightW, bishopW, kingW, queenW,
+        pawnB, rookB, knightB, bishopB, kingB, queenB,
+
+    }
+
+    PIECE piece;
+
     // white on right bottom corner
     // left to right is a to h
     // back to front is 8 to 1
@@ -15,16 +26,15 @@ public class ChessBoard {
     public static Tile[] mWhiteOffBoard;
     private int[] mOrigin;
     private int[] mDestination;
-    enum PIECE {
-        pawnW, rookW, knightW, bishopW, kingW, queenW,
-        pawnB, rookB, knightB, bishopB, kingB, queenB,
 
-    }
+<<<<<<< HEAD
+    public GUI2 mGUI;
 
-    PIECE piecex;
-    String piece="";
+=======
     public GUI mGUI;
+>>>>>>> refs/remotes/origin/master
     public ChessBoard(){
+        this.piece = piece;
         mTiles = new Tile[SIDELENGTH][SIDELENGTH];
         mBlackOffBoard = new Tile[16];
         mWhiteOffBoard = new Tile[16];
@@ -91,45 +101,104 @@ public class ChessBoard {
         mTiles[7][0].setPiece(new Rook(BLACK));
         return false;
     }
+
     public boolean Clear(){
 
         return false;
     }
+<<<<<<< HEAD
+
+
+    public void VividDisplay(){
+
+        for (int backToFront = 0; backToFront < SIDELENGTH; backToFront++) {
+            for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++) {
+                //System.out.println( mTiles[leftToRight][backToFront].getPiece().toString());
+                piece = PIECE.valueOf(mTiles[leftToRight][backToFront].getPiece().toString());
+                switch (piece){
+                    case pawnW:
+                        mGUI.SetThis(mGUI.wpawn,leftToRight * 75,backToFront * 75);
+                        break;
+                    case rookW:
+                        mGUI.SetThis(mGUI.wrook,leftToRight * 75,backToFront * 75);
+                        break;
+                    case knightW:
+                        mGUI.SetThis(mGUI.wknight,leftToRight * 75,backToFront * 75);
+                        break;
+                    case bishopW:
+                        mGUI.SetThis(mGUI.wbishop,leftToRight * 75,backToFront * 75);
+                        break;
+                    case kingW:
+                        mGUI.SetThis(mGUI.wking,leftToRight * 75,backToFront * 75);
+                        break;
+                    case queenW:
+                        mGUI.SetThis(mGUI.wqueen,leftToRight * 75,backToFront * 75);
+                        break;
+                    case pawnB:
+                        mGUI.SetThis(mGUI.bpawn,leftToRight * 75,backToFront * 75);
+                        break;
+                    case rookB:
+                        mGUI.SetThis(mGUI.brook,leftToRight * 75,backToFront * 75);
+                        break;
+                    case knightB:
+                        mGUI.SetThis(mGUI.bknight,leftToRight * 75,backToFront * 75);
+                        break;
+                    case bishopB:
+                        mGUI.SetThis(mGUI.bbishop,leftToRight * 75,backToFront * 75);
+                        break;
+                    case kingB:
+                        mGUI.SetThis(mGUI.bking,leftToRight * 75,backToFront * 75);
+                        break;
+                    case queenB:
+                        mGUI.SetThis(mGUI.bqueen,leftToRight * 75,backToFront * 75);
+                        break;
+
+                }
+=======
     public void VividDisplay(){
         for (int backToFront = 0; backToFront < SIDELENGTH; backToFront++) {
             for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++) {
                 //System.out.println( mTiles[leftToRight][backToFront].getPiece().toString());
-
-                piece = mTiles[leftToRight][backToFront].getPiece().toString() .trim();
-
-                if (piece.equals( "Pawn W") ) {
-                        mGUI.SetThis(mGUI.wpawn, leftToRight * 75, backToFront * 75);
-                } else if (piece.equals("Rook W") ) {
+                switch (mTiles[leftToRight][backToFront].getPiece().toString()){
+                    case "Pawn W":
+                        mGUI.SetThis(mGUI.wpawn,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Rook W":
                         mGUI.SetThis(mGUI.wrook,leftToRight * 75,backToFront * 75);
-                } else if (piece.equals("Knight W") ) {
+                        break;
+                    case "Knight W":
                         mGUI.SetThis(mGUI.wknight,leftToRight * 75,backToFront * 75);
-                } else if (piece.equals("Bishop W") ) {
+                        break;
+                    case "Bishop W":
                         mGUI.SetThis(mGUI.wbishop,leftToRight * 75,backToFront * 75);
-                } else if (piece.equals("King W") ) {
+                        break;
+                    case "King W":
                         mGUI.SetThis(mGUI.wking,leftToRight * 75,backToFront * 75);
-                } else if (piece.equals("Queen W") ) {
+                        break;
+                    case "Queen W":
                         mGUI.SetThis(mGUI.wqueen,leftToRight * 75,backToFront * 75);
-                } else if (piece.equals("Pawn B") ) {
-                        mGUI.SetThis(mGUI.bpawn,leftToRight * 75,backToFront * 75);
-                } else if (piece.equals("Rook B") ) {
-                        mGUI.SetThis(mGUI.brook,leftToRight * 75,backToFront * 75);
-                } else if (piece.equals("Knight B") ) {
-                        mGUI.SetThis(mGUI.bknight,leftToRight * 75,backToFront * 75);
-                } else if (piece.equals("Bishop B") ) {
-                        mGUI.SetThis(mGUI.bbishop,leftToRight * 75,backToFront * 75);
-                } else if (piece.equals("King B") ) {
-                        mGUI.SetThis(mGUI.bking,leftToRight * 75,backToFront * 75);
-                } else if (piece.equals("Queen B")) {
-                        mGUI.SetThis(mGUI.bqueen,leftToRight * 75,backToFront * 75);
-                } else  {
-                    // what if not piece
+                        break;
 
+                    case "Pawn B":
+                        mGUI.SetThis(mGUI.bpawn,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Rook B":
+                        mGUI.SetThis(mGUI.brook,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Knight B":
+                        mGUI.SetThis(mGUI.bknight,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Bishop B":
+                        mGUI.SetThis(mGUI.bbishop,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "King B":
+                        mGUI.SetThis(mGUI.bking,leftToRight * 75,backToFront * 75);
+                        break;
+                    case "Queen B":
+                        mGUI.SetThis(mGUI.bqueen,leftToRight * 75,backToFront * 75);
+                        break;
                 }
+
             }
         }
 
@@ -189,13 +258,37 @@ public class ChessBoard {
                 //System.out.println("");
                 System.out.print( "|");//                     ");
                 System.out.print(mTiles[leftToRight][backToFront].toString());
+>>>>>>> refs/remotes/origin/master
             }
-            System.out.print( "|");
-            System.out.println("");
-        }
-        for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++){
-            System.out.print("______________________");
 
+<<<<<<< HEAD
+         }
+
+    }
+
+
+    public void Display(){
+
+        System.out.print("______________________");
+        VividDisplay();
+
+    }
+
+    public int MovePiece(String origin, String destination){
+
+        System.out.println("Move Piece");
+
+        if (ValidateMove(origin, destination)){
+
+            if (KilledOpponent(mTiles[mOrigin[0]][mOrigin[1]].getPiece(),mTiles[mDestination[0]][mDestination[1]].getPiece())== true){
+
+            }
+
+            mTiles[mDestination[0]][mDestination[1]].setPiece( mTiles[mOrigin[0]][mOrigin[1]].getPiece());
+            mTiles[mOrigin[0]][mOrigin[1]].setPiece(new EmptyTile());
+        }
+
+=======
         }
         VividDisplay();
     }
@@ -211,9 +304,10 @@ public class ChessBoard {
             mTiles[mOrigin[0]][mOrigin[1]].setPiece(new EmptyTile());
 
         }
-        Display();
+>>>>>>> refs/remotes/origin/master
         return 0;
     }
+
     private boolean ParseLocation(String location, int[] coord){
         String subString;
         location = location.toLowerCase();
@@ -255,11 +349,37 @@ public class ChessBoard {
         }
         return true;
     }
+
     private boolean ValidateMove(String origin, String destination){
         ParseLocation(origin,mOrigin);
+
         // System.out.println(mOrigin[0] + " " + mOrigin[1]);
         ParseLocation(destination,mDestination);
         System.out.println("about to validate CanMove");
+<<<<<<< HEAD
+        // System.out.println(mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove(mOrigin, mDestination, mTiles));
+        if ( mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove(mOrigin, mDestination, mTiles)){
+            System.out.println("can move");
+            return true;
+        }
+        return false;
+
+    }
+
+
+    private boolean KilledOpponent(ChessPiece thisPlayer, ChessPiece opponentPlayer){
+
+        if (thisPlayer.getColor() != opponentPlayer.getColor() && opponentPlayer.getColor()!=-1){
+            System.out.println("Congratulations " + thisPlayer.toString()
+                    + " You killed the " + opponentPlayer.toString());
+            return true;
+        }
+        return false;
+    }
+
+
+    public boolean SetGui(GUI2 vividBoard){
+=======
        // System.out.println(mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove(mOrigin, mDestination, mTiles));
        if ( mTiles[mOrigin[0]][mOrigin[1]].getPiece().CanMove(mOrigin, mDestination, mTiles) == true){
            System.out.println("can move");
@@ -276,6 +396,7 @@ public class ChessBoard {
         return false;
     }
     public boolean SetGui(GUI vividBoard){
+>>>>>>> refs/remotes/origin/master
         mGUI=vividBoard;
         return true;
     }
