@@ -15,7 +15,14 @@ public class ChessBoard {
     public static Tile[] mWhiteOffBoard;
     private int[] mOrigin;
     private int[] mDestination;
+    enum PIECE {
+        pawnW, rookW, knightW, bishopW, kingW, queenW,
+        pawnB, rookB, knightB, bishopB, kingB, queenB,
 
+    }
+
+    PIECE piecex;
+    String piece="";
     public GUI mGUI;
     public ChessBoard(){
         mTiles = new Tile[SIDELENGTH][SIDELENGTH];
@@ -92,46 +99,37 @@ public class ChessBoard {
         for (int backToFront = 0; backToFront < SIDELENGTH; backToFront++) {
             for (int leftToRight = 0; leftToRight < SIDELENGTH; leftToRight++) {
                 //System.out.println( mTiles[leftToRight][backToFront].getPiece().toString());
-                switch (mTiles[leftToRight][backToFront].getPiece().toString()){
-                    case "Pawn W":
-                        mGUI.SetThis(mGUI.wpawn,leftToRight * 75,backToFront * 75);
-                        break;
-                    case "Rook W":
+
+                piece = mTiles[leftToRight][backToFront].getPiece().toString() .trim();
+
+                if (piece.equals( "Pawn W") ) {
+                        mGUI.SetThis(mGUI.wpawn, leftToRight * 75, backToFront * 75);
+                } else if (piece.equals("Rook W") ) {
                         mGUI.SetThis(mGUI.wrook,leftToRight * 75,backToFront * 75);
-                        break;
-                    case "Knight W":
+                } else if (piece.equals("Knight W") ) {
                         mGUI.SetThis(mGUI.wknight,leftToRight * 75,backToFront * 75);
-                        break;
-                    case "Bishop W":
+                } else if (piece.equals("Bishop W") ) {
                         mGUI.SetThis(mGUI.wbishop,leftToRight * 75,backToFront * 75);
-                        break;
-                    case "King W":
+                } else if (piece.equals("King W") ) {
                         mGUI.SetThis(mGUI.wking,leftToRight * 75,backToFront * 75);
-                        break;
-                    case "Queen W":
+                } else if (piece.equals("Queen W") ) {
                         mGUI.SetThis(mGUI.wqueen,leftToRight * 75,backToFront * 75);
-                        break;
-
-                    case "Pawn B":
+                } else if (piece.equals("Pawn B") ) {
                         mGUI.SetThis(mGUI.bpawn,leftToRight * 75,backToFront * 75);
-                        break;
-                    case "Rook B":
+                } else if (piece.equals("Rook B") ) {
                         mGUI.SetThis(mGUI.brook,leftToRight * 75,backToFront * 75);
-                        break;
-                    case "Knight B":
+                } else if (piece.equals("Knight B") ) {
                         mGUI.SetThis(mGUI.bknight,leftToRight * 75,backToFront * 75);
-                        break;
-                    case "Bishop B":
+                } else if (piece.equals("Bishop B") ) {
                         mGUI.SetThis(mGUI.bbishop,leftToRight * 75,backToFront * 75);
-                        break;
-                    case "King B":
+                } else if (piece.equals("King B") ) {
                         mGUI.SetThis(mGUI.bking,leftToRight * 75,backToFront * 75);
-                        break;
-                    case "Queen B":
+                } else if (piece.equals("Queen B")) {
                         mGUI.SetThis(mGUI.bqueen,leftToRight * 75,backToFront * 75);
-                        break;
-                }
+                } else  {
+                    // what if not piece
 
+                }
             }
         }
 
@@ -213,6 +211,7 @@ public class ChessBoard {
             mTiles[mOrigin[0]][mOrigin[1]].setPiece(new EmptyTile());
 
         }
+        Display();
         return 0;
     }
     private boolean ParseLocation(String location, int[] coord){
