@@ -19,15 +19,10 @@
       <file leaf-file-name="ChessBoard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/csu/csci325/ChessBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="916">
-              <caret line="203" column="0" lean-forward="false" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+            <state relative-caret-position="4752">
+              <caret line="99" column="30" lean-forward="false" selection-start-line="99" selection-start-column="30" selection-end-line="99" selection-end-column="30" />
               <folding>
-                <element signature="method#VividDisplay#0;class#ChessBoard#0" expanded="false" />
-                <element signature="method#MovePiece#0;class#ChessBoard#0" expanded="false" />
-                <element signature="method#ParseLocation#0;class#ChessBoard#0" expanded="false" />
-                <element signature="method#KilledOpponent#0;class#ChessBoard#0" expanded="false" />
-                <element signature="e#11682#11683#0" expanded="true" />
-                <element signature="e#11757#11758#0" expanded="true" />
+                <marker date="1493088921643" expanded="false" signature="11913:11923" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -36,14 +31,9 @@
       <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/csu/csci325/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#AlphaFromX#0;class#GUI#0" expanded="false" />
-                <element signature="method#RowFromY#0;class#GUI#0" expanded="false" />
-                <element signature="method#CreatePieces#0;class#GUI#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="48">
+              <caret line="203" column="0" lean-forward="false" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,15 +41,14 @@
       <file leaf-file-name="ChessPiece.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/csu/csci325/ChessPiece.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="334" column="62" lean-forward="false" selection-start-line="334" selection-start-column="62" selection-end-line="334" selection-end-column="62" />
+            <state relative-caret-position="16464">
+              <caret line="354" column="24" lean-forward="false" selection-start-line="354" selection-start-column="24" selection-end-line="354" selection-end-column="24" />
               <folding>
                 <element signature="e#482#483#0" expanded="true" />
                 <element signature="e#511#512#0" expanded="true" />
                 <element signature="docComment;method#getDirection#0;class#ChessPiece#0" expanded="false" />
                 <element signature="e#815#889#0" expanded="false" />
-                <element signature="docComment;method#isEnemy#0;class#ChessPiece#0" expanded="false" />
-                <element signature="docComment;method#CanMove#0;class#ChessPiece#0" expanded="false" />
+                <marker date="1493088921645" expanded="true" signature="15798:15864" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -68,7 +57,7 @@
       <file leaf-file-name="Tile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/csu/csci325/Tile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
+            <state relative-caret-position="1008">
               <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#478#479#0" expanded="true" />
@@ -80,9 +69,13 @@
       <file leaf-file-name="Main_PlayChess.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/csu/csci325/Main_PlayChess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="1584">
               <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-              <folding />
+              <folding>
+                <marker date="1493088921650" expanded="true" signature="381:1472" ph="{...}" />
+                <marker date="1493088921650" expanded="true" signature="1334:1466" ph="//..." />
+                <marker date="1493088921650" expanded="true" signature="1477:1545" ph="//..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -609,31 +602,31 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/csu/csci325/ChessBoard.java</url>
-          <line>37</line>
+          <line>28</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/csu/csci325/ChessBoard.java</url>
-          <line>221</line>
+          <line>152</line>
           <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/csu/csci325/ChessBoard.java</url>
-          <line>217</line>
+          <line>148</line>
           <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/csu/csci325/ChessBoard.java</url>
-          <line>284</line>
+          <line>204</line>
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/csu/csci325/ChessPiece.java</url>
-          <line>334</line>
+          <line>354</line>
           <properties />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
@@ -651,9 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="e#300#301#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -662,12 +652,7 @@
         <state relative-caret-position="1056">
           <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding>
-            <element signature="method#VividDisplay#0;class#ChessBoard#0" expanded="false" />
-            <element signature="method#MovePiece#0;class#ChessBoard#0" expanded="false" />
-            <element signature="method#ParseLocation#0;class#ChessBoard#0" expanded="false" />
-            <element signature="method#KilledOpponent#0;class#ChessBoard#0" expanded="false" />
-            <element signature="e#11682#11683#0" expanded="true" />
-            <element signature="e#11757#11758#0" expanded="true" />
+            <marker date="1493088921643" expanded="false" signature="11913:11923" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -677,16 +662,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
             <element signature="docComment;method#getDirection#0;class#ChessPiece#0" expanded="false" />
-            <element signature="method#getDirection#0;class#ChessPiece#0" expanded="false" />
             <element signature="e#815#889#0" expanded="false" />
-            <element signature="method#howFar#0;class#ChessPiece#0" expanded="false" />
-            <element signature="docComment;method#isEnemy#0;class#ChessPiece#0" expanded="false" />
-            <element signature="method#isEnemy#0;class#ChessPiece#0" expanded="false" />
-            <element signature="method#isObstructed#0;class#ChessPiece#0" expanded="false" />
-            <element signature="docComment;method#CanMove#0;class#ChessPiece#0" expanded="false" />
-            <element signature="method#CanMove#0;class#ChessPiece#0" expanded="false" />
-            <element signature="e#7683#7691#0" expanded="false" />
+            <marker date="1493088921645" expanded="true" signature="15798:15864" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -727,9 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="e#284#285#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -737,9 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding>
-            <element signature="e#300#301#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -786,7 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="669" column="0" lean-forward="false" selection-start-line="669" selection-start-column="0" selection-end-line="669" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,30 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58512">
           <caret line="1294" column="0" lean-forward="false" selection-start-line="1294" selection-start-column="0" selection-end-line="1294" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#71000#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#23786#23787#0" expanded="false" />
-            <element signature="e#23817#23818#0" expanded="false" />
-            <element signature="e#24093#24094#0" expanded="false" />
-            <element signature="e#24136#24137#0" expanded="false" />
-            <element signature="e#28821#28822#0" expanded="false" />
-            <element signature="e#28876#28877#0" expanded="false" />
-            <element signature="e#32573#32574#0" expanded="false" />
-            <element signature="e#32634#32635#0" expanded="false" />
-            <element signature="e#40014#40015#0" expanded="false" />
-            <element signature="e#40054#40055#0" expanded="false" />
-            <element signature="e#40437#40438#0" expanded="false" />
-            <element signature="e#40477#40478#0" expanded="false" />
-            <element signature="e#44061#44062#0" expanded="false" />
-            <element signature="e#44115#44116#0" expanded="false" />
-            <element signature="e#44150#44151#0" expanded="false" />
-            <element signature="e#44182#44183#0" expanded="false" />
-            <element signature="e#50831#50832#0" expanded="false" />
-            <element signature="e#50867#50868#0" expanded="false" />
-            <element signature="e#70966#70967#0" expanded="false" />
-            <element signature="e#70996#70997#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -860,30 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2544">
           <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#6884#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#2185#2186#0" expanded="false" />
-            <element signature="e#2231#2232#0" expanded="false" />
-            <element signature="e#2503#2504#0" expanded="false" />
-            <element signature="e#2549#2550#0" expanded="false" />
-            <element signature="e#3185#3186#0" expanded="false" />
-            <element signature="e#3238#3239#0" expanded="false" />
-            <element signature="e#3287#3288#0" expanded="false" />
-            <element signature="e#3366#3367#0" expanded="false" />
-            <element signature="e#3606#3607#0" expanded="false" />
-            <element signature="e#3661#3662#0" expanded="false" />
-            <element signature="e#3730#3731#0" expanded="false" />
-            <element signature="e#3787#3788#0" expanded="false" />
-            <element signature="e#3856#3857#0" expanded="false" />
-            <element signature="e#3921#3922#0" expanded="false" />
-            <element signature="e#4175#4176#0" expanded="false" />
-            <element signature="e#4217#4218#0" expanded="false" />
-            <element signature="e#6328#6329#0" expanded="false" />
-            <element signature="e#6368#6369#0" expanded="false" />
-            <element signature="e#6427#6428#0" expanded="false" />
-            <element signature="e#6467#6468#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -911,7 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="265" column="0" lean-forward="false" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -919,9 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-          <folding>
-            <element signature="e#4603#4604#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -929,7 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -937,7 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
           <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -965,9 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="e#1489#1490#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -975,9 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#1142#1143#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -985,11 +898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="635">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#167#168#0" expanded="false" />
-            <element signature="e#201#202#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -997,10 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding>
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#337#338#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1008,10 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding>
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1019,10 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding>
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1087,7 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
           <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1104,7 +999,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/csu/csci325/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
+        <state relative-caret-position="1008">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#478#479#0" expanded="true" />
@@ -1114,38 +1009,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/csu/csci325/ChessBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="916">
-          <caret line="203" column="0" lean-forward="false" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+        <state relative-caret-position="4752">
+          <caret line="99" column="30" lean-forward="false" selection-start-line="99" selection-start-column="30" selection-end-line="99" selection-end-column="30" />
           <folding>
-            <element signature="method#VividDisplay#0;class#ChessBoard#0" expanded="false" />
-            <element signature="method#MovePiece#0;class#ChessBoard#0" expanded="false" />
-            <element signature="method#ParseLocation#0;class#ChessBoard#0" expanded="false" />
-            <element signature="method#KilledOpponent#0;class#ChessBoard#0" expanded="false" />
-            <element signature="e#11682#11683#0" expanded="true" />
-            <element signature="e#11757#11758#0" expanded="true" />
+            <marker date="1493088921643" expanded="false" signature="11913:11923" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/csu/csci325/Main_PlayChess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
+        <state relative-caret-position="1584">
           <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding />
+          <folding>
+            <marker date="1493088921650" expanded="true" signature="381:1472" ph="{...}" />
+            <marker date="1493088921650" expanded="true" signature="1334:1466" ph="//..." />
+            <marker date="1493088921650" expanded="true" signature="1477:1545" ph="//..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/csu/csci325/ChessPiece.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="334" column="62" lean-forward="false" selection-start-line="334" selection-start-column="62" selection-end-line="334" selection-end-column="62" />
+        <state relative-caret-position="16464">
+          <caret line="354" column="24" lean-forward="false" selection-start-line="354" selection-start-column="24" selection-end-line="354" selection-end-column="24" />
           <folding>
             <element signature="e#482#483#0" expanded="true" />
             <element signature="e#511#512#0" expanded="true" />
             <element signature="docComment;method#getDirection#0;class#ChessPiece#0" expanded="false" />
             <element signature="e#815#889#0" expanded="false" />
-            <element signature="docComment;method#isEnemy#0;class#ChessPiece#0" expanded="false" />
-            <element signature="docComment;method#CanMove#0;class#ChessPiece#0" expanded="false" />
+            <marker date="1493088921645" expanded="true" signature="15798:15864" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1160,14 +1053,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/csu/csci325/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#AlphaFromX#0;class#GUI#0" expanded="false" />
-            <element signature="method#RowFromY#0;class#GUI#0" expanded="false" />
-            <element signature="method#CreatePieces#0;class#GUI#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="48">
+          <caret line="203" column="0" lean-forward="false" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
