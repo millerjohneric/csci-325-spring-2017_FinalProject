@@ -28,8 +28,14 @@ public class Bishop  extends ChessPiece{
             return "";
         }
     }
+<<<<<<< HEAD
+    public boolean CanMove(int[] mOrigin, int[] mDestination, Tile[][] mTiles){
+        return false;
+    }
+=======
     //public int getColor(){
     //    return super.getColor();
    // }
 
+>>>>>>> refs/remotes/origin/master
 }

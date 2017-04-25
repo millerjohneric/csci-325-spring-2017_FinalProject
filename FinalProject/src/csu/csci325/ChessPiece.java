@@ -153,6 +153,9 @@ public class ChessPiece {
         int[] distance =new int[3];
         distance = howFar( mOrigin, mDestination);
 
+<<<<<<< HEAD
+    public boolean CanMove(int[] mOrigin, int[] mDestination, Tile[][] mTiles) {
+=======
         //System.out.println(distance[2])
         for (int distGoing = 1; distGoing < distance[2]; distGoing++) {
             //System.out.println(distGoing + " " + distance[0] + " " + distance[1] + " " + distance[2]);
@@ -175,6 +178,7 @@ public class ChessPiece {
             // mTiles[mOrigin[0] + distGoing * distance[0]]
             //        [mOrigin[1] +  distGoing * distance[1]].setPiece(mTiles[mOrigin[0]][mOrigin[1]].getPiece());
         }
+>>>>>>> refs/remotes/origin/master
         return false;
     }
     /**
