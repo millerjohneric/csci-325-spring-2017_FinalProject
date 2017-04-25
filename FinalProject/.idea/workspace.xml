@@ -36,7 +36,7 @@
       <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/csu/csci325/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
+            <state relative-caret-position="5520">
               <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -59,17 +59,6 @@
                 <element signature="docComment;method#getDirection#0;class#ChessPiece#0" expanded="false" />
                 <element signature="e#815#889#0" expanded="false" />
                 <element signature="docComment;method#isEnemy#0;class#ChessPiece#0" expanded="false" />
-                <marker date="1493090080876" expanded="true" signature="6686:6985" ph="/**...*/" />
-                <marker date="1493090080876" expanded="true" signature="7078:15864" ph="{...}" />
-                <marker date="1493090080876" expanded="true" signature="7546:7645" ph="//..." />
-                <marker date="1493090080876" expanded="true" signature="7683:7891" ph="//..." />
-                <marker date="1493090080876" expanded="true" signature="12142:12293" ph="//..." />
-                <marker date="1493090080876" expanded="true" signature="12528:12588" ph="//..." />
-                <marker date="1493090080876" expanded="true" signature="13035:13095" ph="//..." />
-                <marker date="1493090080876" expanded="true" signature="13708:13768" ph="//..." />
-                <marker date="1493090080876" expanded="true" signature="14448:14508" ph="//..." />
-                <marker date="1493090080876" expanded="true" signature="14903:15033" ph="//..." />
-                <marker date="1493090080876" expanded="true" signature="15184:15417" ph="//..." />
               </folding>
             </state>
           </provider>
@@ -689,17 +678,6 @@
             <element signature="docComment;method#getDirection#0;class#ChessPiece#0" expanded="false" />
             <element signature="e#815#889#0" expanded="false" />
             <element signature="docComment;method#isEnemy#0;class#ChessPiece#0" expanded="false" />
-            <marker date="1493090080876" expanded="true" signature="6686:6985" ph="/**...*/" />
-            <marker date="1493090080876" expanded="true" signature="7078:15864" ph="{...}" />
-            <marker date="1493090080876" expanded="true" signature="7546:7645" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="7683:7891" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="12142:12293" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="12528:12588" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="13035:13095" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="13708:13768" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="14448:14508" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="14903:15033" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="15184:15417" ph="//..." />
           </folding>
         </state>
       </provider>
@@ -1035,17 +1013,6 @@
             <element signature="docComment;method#getDirection#0;class#ChessPiece#0" expanded="false" />
             <element signature="e#815#889#0" expanded="false" />
             <element signature="docComment;method#isEnemy#0;class#ChessPiece#0" expanded="false" />
-            <marker date="1493090080876" expanded="true" signature="6686:6985" ph="/**...*/" />
-            <marker date="1493090080876" expanded="true" signature="7078:15864" ph="{...}" />
-            <marker date="1493090080876" expanded="true" signature="7546:7645" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="7683:7891" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="12142:12293" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="12528:12588" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="13035:13095" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="13708:13768" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="14448:14508" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="14903:15033" ph="//..." />
-            <marker date="1493090080876" expanded="true" signature="15184:15417" ph="//..." />
           </folding>
         </state>
       </provider>
@@ -1059,7 +1026,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/csu/csci325/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
+        <state relative-caret-position="5520">
           <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
