@@ -14,7 +14,7 @@ public class Main_PlayChess {
 
     private static boolean WHITE = true;
     private static boolean BLACK = false;
-
+    public static String strStatus="";
     //public static GUI vividGui;
     public static void main(String[] args) {
         ChessBoard gameBoard = new ChessBoard();

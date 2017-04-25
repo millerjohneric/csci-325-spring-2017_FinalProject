@@ -18,7 +18,7 @@ public class Queen  extends ChessPiece{
     }
     public String toString(){
         if (super.getColor() == 1) {
-            return "Queen W      ";
+            return "Queen O      ";
         }else if (super.getColor() == 0) {
             return     "Queen B      ";
         }else{

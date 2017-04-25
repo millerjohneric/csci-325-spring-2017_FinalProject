@@ -17,7 +17,7 @@ public class King extends ChessPiece {
     }
     public String toString(){
         if (super.getColor() == 1) {
-            return "King W       ";
+            return "King O       ";
         }else if (super.getColor() == 0) {
             return "King B       ";
         }else{

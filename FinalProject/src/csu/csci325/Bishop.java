@@ -21,7 +21,7 @@ public class Bishop  extends ChessPiece{
 
     public String toString(){
         if (super.getColor() == 1) {
-            return "Bishop W     ";
+            return "Bishop O     ";
         }else if (super.getColor() == 0) {
             return "Bishop B     ";
         }else{

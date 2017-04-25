@@ -17,7 +17,7 @@ public class Rook  extends ChessPiece{
     }
     public String toString(){
         if (super.getColor() == 1) {
-            return "Rook W       ";
+            return "Rook O       ";
         }else if (super.getColor() == 0) {
             return "Rook B       ";
         }else{

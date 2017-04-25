@@ -14,6 +14,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -38,17 +40,18 @@ public class GUI extends Application {
     Image bknight ;
     Image bking ;
     Image bqueen ;
-    public String strStatus="";
-    boolean turn;
+    public static String strStatus;
+    int turn;
 
     static String origin="";
     static String destination="";
 
     ChessBoard gameBoard;
     public void start(Stage primaryStage) throws Exception {
-        turn = true;
+        turn = 1;
         root = new Group();
         theScene = new Scene(root);
+        StackPane holder = new StackPane();
         primaryStage.setScene(theScene);
         Button bMove = new Button("Move");
         Button bClear = new Button("Clear");
@@ -56,28 +59,61 @@ public class GUI extends Application {
         Label lDestination = new Label("Destination: ");
         Label lOriginV = new Label("");
         Label lDestinationV = new Label("");
-        Label lStatus = new Label("Click the piece you want to move.");
-        Label lColor = new Label("Orange players turn.");
         canvas = new Canvas(1400, 700);
         root.getChildren().add(canvas);
         HBox menu = new HBox(5);
         menu.setPadding(new Insets(10));
         menu.setAlignment(Pos.BASELINE_RIGHT);
         menu.setLayoutX(650);
-        menu.setLayoutY(000);
-        menu.getChildren().addAll(lOrigin, lOriginV, lDestination, lDestinationV,bMove,bClear,lStatus);
+        menu.setLayoutY(350);
+        menu.getChildren().addAll(lOrigin, lOriginV, lDestination, lDestinationV,bMove,bClear);
 
-        HBox mTurn = new HBox(5);
+        Label lStatus = new Label("Click the piece you want to move.");
+        Label lColor = new Label("Orange players turn.");
+        VBox mTurn = new VBox(2);
         mTurn.setPadding(new Insets(10));
         mTurn.setAlignment(Pos.BASELINE_RIGHT);
         mTurn.setLayoutX(650);
-        mTurn.setLayoutY(50);
-        mTurn.getChildren().add(lColor);
-        root.getChildren().addAll(menu,mTurn);
+        mTurn.setLayoutY(400);
+        mTurn.getChildren().addAll(lColor, lStatus);
+        Label A1 = new Label(" 1 ");
+        Label A2 = new Label(" 2 ");
+        Label A3 = new Label(" 3 ");
+        Label A4 = new Label(" 4 ");
+        Label A5 = new Label(" 5 ");
+        Label A6 = new Label(" 6 ");
+        Label A7 = new Label(" 7 ");
+        Label A8 = new Label(" 8 ");
+        VBox tileNames = new VBox(2);
+        tileNames.setPadding(new Insets(10));
+        tileNames.setAlignment(Pos.BASELINE_RIGHT);
+        tileNames.setLayoutX(620);
+        tileNames.setSpacing(63);
+        tileNames.setLayoutY(0);
+        tileNames.getChildren().addAll(A1,A2,A3,A4,A5,A6,A7,A8);
+        Label B1 = new Label(" A ");
+        Label B2 = new Label(" B ");
+        Label B3 = new Label(" C ");
+        Label B4 = new Label(" D ");
+        Label B5 = new Label(" E ");
+        Label B6 = new Label(" F ");
+        Label B7 = new Label(" G ");
+        Label B8 = new Label(" H ");
+        HBox tileLetters = new HBox(2);
+        tileLetters.setPadding(new Insets(10));
+        tileLetters.setAlignment(Pos.BASELINE_RIGHT);
+        tileLetters.setLayoutX(0);
+        tileLetters.setSpacing(63);
+        tileLetters.setLayoutY(620);
+        tileLetters.getChildren().addAll(B1,B2,B3,B4,B5,B6,B7,B8);
         //root.getChildren().add(button);
+        holder.getChildren().add(canvas);
+        root.getChildren().add(holder);
+        holder.setStyle("-fx-background-color: LAVENDER");
+        root.getChildren().addAll(menu,mTurn, tileLetters, tileNames);
         gc = canvas.getGraphicsContext2D();
         bClear.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
+
             public void handle(ActionEvent e) {
                 lOriginV.setText("");
                 lDestinationV.setText("");
@@ -90,17 +126,26 @@ public class GUI extends Application {
         bMove.setOnAction(new EventHandler<ActionEvent>() {
 
             public void handle(ActionEvent e) {
-                if (gameBoard.MovePiece(lOriginV.getText(),  lDestinationV.getText())== -1){
-                lStatus.setText("You cannot move here you already have a piece on that tile.");
+                if ( gameBoard.whatColorIsThisPiece(lOriginV.getText())!=turn){
+                    lStatus.setText("Wait your turn!");
+
+                    lOriginV.setText("");
+                    lDestinationV.setText("");
+                    origin="";
+                    destination="";
+                    return;
+                }
+                if (gameBoard.MovePiece(lOriginV.getText(),  lDestinationV.getText())== 0){
+                    lStatus.setText(strStatus);
                 }else{
                     RefreshBoard();
                     gameBoard.Display();
                     lStatus.setText(strStatus);
                     if (lColor.getText().equals("Orange players turn.")){
-
+                        turn = 0;
                         lColor.setText("Blue players turn.");
                     }else{
-
+                        turn = 1;
                         lColor.setText("Orange players turn.");
                     }
 
