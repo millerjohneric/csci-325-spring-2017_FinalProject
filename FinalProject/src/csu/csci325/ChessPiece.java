@@ -46,7 +46,7 @@ public class ChessPiece {
             compas = COMPAS.SW;
         }
         if (mDestination[0] - mOrigin[0] < 0 && mDestination[1] - mOrigin[1] == 0) {
-            compas = COMPAS.SE;
+            compas = COMPAS.WE;
         }
         if (mDestination[0] - mOrigin[0] < 0 && mDestination[1] - mOrigin[1] < 0) {
             compas = COMPAS.NW;
@@ -55,7 +55,7 @@ public class ChessPiece {
             compas = COMPAS.NO;
         }
         if (mDestination[0] - mOrigin[0] > 0 && mDestination[1] - mOrigin[1] > 0) {
-            compas = COMPAS.NE;
+            compas = COMPAS.SE;
         }
         if (mDestination[0] - mOrigin[0] > 0 && mDestination[1] - mOrigin[1] == 0) {
             compas = COMPAS.EA;
@@ -86,7 +86,7 @@ public class ChessPiece {
             distance[1] = 1;
             distance[2] = Math.abs(mDestination[1] - mOrigin[1]);
         }
-        if ( compas == COMPAS.SE ) {
+        if ( compas == COMPAS.WE ) {
             distance[0] = -1;
             distance[1] = 0;
             distance[2] = Math.abs(mDestination[0] - mOrigin[0]);
@@ -101,7 +101,7 @@ public class ChessPiece {
             distance[1] = -1;
             distance[2] = Math.abs(mDestination[1] - mOrigin[1]);
         }
-        if ( compas == COMPAS.NE ) {
+        if ( compas == COMPAS.SE ) {
             distance[0] = 1;
             distance[1] = 1;
             distance[2] = Math.abs(mDestination[1] - mOrigin[1]);
@@ -155,8 +155,8 @@ public class ChessPiece {
 
         //System.out.println(distance[2])
         for (int distGoing = 1; distGoing < distance[2]; distGoing++) {
-            System.out.println(distGoing + " " + distance[0] + " " + distance[1] + " " + distance[2]);
-            System.out.println(mOrigin[0] + distGoing * distance[0]);
+            //System.out.println(distGoing + " " + distance[0] + " " + distance[1] + " " + distance[2]);
+            //System.out.println(mOrigin[0] + distGoing * distance[0]);
             // if the tile along the path to the destination has a piece
             // with the same color or enemy color it is obstructed
             if (mTiles[mOrigin[0] + distGoing * distance[0]]
@@ -184,18 +184,19 @@ public class ChessPiece {
      * @param mTiles  the board itself
      * @return  "True" if the piece can move to destination, "False" otherwise.
      */
-    public boolean CanMove(int[] mOrigin, int[] mDestination, Tile[][] mTiles){//}, COMPAS compas){
+    public boolean CanMove(int[] mOrigin, int[] mDestination, Tile[][] mTiles, String[] err){//}, COMPAS compas){
         COMPAS compas = getDirection(mOrigin, mDestination);
         int[] distance =new int[3];
         distance = howFar( mOrigin, mDestination);
         // todo: determine type of chesspiece.
         if (this instanceof Pawn) {
             if (isObstructed(mOrigin, mDestination, mTiles) == true){
-                System.out.println("Obstructed");
+                //System.out.println("Obstructed");
+                err[0]="Obstructed";
                 return false;
             }
             // distance of one except first move
-            System.out.println("Pawn attempting to move. ");
+            //System.out.println("Pawn attempting to move. ");
 
             if (this.mColor == 1){  // white
                 //System.out.println("color is " + this.mColor);
@@ -206,32 +207,42 @@ public class ChessPiece {
                     case NO:
                         // first move can move two spaces forward only
                         if(mOrigin[1] == 6){
-                            System.out.println("pawn can move two spaces on first move ");
+                            //err[0]="pawn can move two spaces on first move ";
                             if (distance[2] > 2) {
-                            System.out.println("distance > 2  pawn can't move ");
+                                err[0]="distance > 2  pawn can't move ";
                             return false;
                             }
                         } else if (distance[2] > 1) {
-                            System.out.println("distance > 1  pawn can't move ");
+                            err[0]="distance > 1  pawn can't move ";
                             return false;
                         }
                         if (isEnemy(mOrigin, mDestination, mTiles) == true){
-                            System.out.println("Pawn can only attack an enemy diagonally.");
+                            err[0]="Pawn can only attack an enemy diagonally.";
                             return false;
                         }
                         return true;
                         //break;
 
-                    case NW:
+                    case NW:                        // pawn can only move one space otherwise
+                        if (distance[2] > 1) {
+                            err[0]="distance > 1  pawn can't move ";
+                            return false;
+                        }
+
+                        if (isEnemy(mOrigin, mDestination, mTiles)!= true){
+                            err[0]="Pawn can only move diagonally when attacking.";
+                            return false;
+                        }
+                        return true;
                     case NE:
                         // pawn can only move one space otherwise
                         if (distance[2] > 1) {
-                            System.out.println("distance > 1  pawn can't move ");
+                            err[0]="distance > 1  pawn can't move ";
                             return false;
                             }
 
                         if (isEnemy(mOrigin, mDestination, mTiles)!= true){
-                            System.out.println("Pawn can only move diagonally when attacking.");
+                            err[0]="Pawn can only move diagonally when attacking.";
                             return false;
                         }
                         return true;
@@ -243,31 +254,40 @@ public class ChessPiece {
                     case SO:
                         // first move can move two spaces forward only
                         if(mOrigin[1] == 1){
-                            //System.out.println("pawn can move two spaces on first move ");
+                            //err[0]="pawn can move two spaces on first move ");
                             if (distance[2] > 2) {
-                                System.out.println("distance > 2  pawn can't move ");
+                                err[0]="distance > 2  pawn can't move ";
                                 return false;
                             }
                         } else if (distance[2] > 1) {
-                            System.out.println("distance > 1  pawn can't move ");
+                            err[0]="distance > 1  pawn can't move ";
                             return false;
                         }
                         if (isEnemy(mOrigin, mDestination, mTiles) == true){
-                            System.out.println("Pawn can only attack an enemy diagonally.");
+                            err[0]="Pawn can only attack an enemy diagonally.";
                             return false;
                         }
                         return true;
                     //break;
-                    case SW:
-                    case SE:
-                        // pawn can only move one space otherwise
+                    case SW:// pawn can only move one space otherwise
                         if (distance[2] > 1) {
-                            System.out.println("distance > 1  pawn can't move ");
+                            err[0]="distance > 1  pawn can't move ";
                             return false;
                         }
 
                         if (isEnemy(mOrigin, mDestination, mTiles)!= true){
-                            System.out.println("Pawn can only move diagonally when attacking.");
+                            err[0]="Pawn can only move diagonally when attacking.";
+                            return false;
+                        }
+                    case SE:
+                        // pawn can only move one space otherwise
+                        if (distance[2] > 1) {
+                            err[0]="distance > 1  pawn can't move ";
+                            return false;
+                        }
+
+                        if (isEnemy(mOrigin, mDestination, mTiles)!= true){
+                            err[0]="Pawn can only move diagonally when attacking.";
                             return false;
                         }
                         return true;
@@ -283,7 +303,7 @@ public class ChessPiece {
         }
         if (this instanceof Rook) {
             if (isObstructed(mOrigin, mDestination, mTiles) == true){
-                System.out.println("Obstructed");
+                err[0]="Obstructed";
                 return false;
             }
             // no limit on distance
@@ -300,7 +320,7 @@ public class ChessPiece {
         }
         if (this instanceof Bishop) {
             if (isObstructed(mOrigin, mDestination, mTiles) == true){
-                System.out.println("Obstructed");
+                err[0]="Obstructed";
                 return false;
             }
             // no limit on distance
@@ -312,13 +332,17 @@ public class ChessPiece {
                 case EA:
                     return false;
                 default:
+                    if(Math.abs(mDestination[0] - mOrigin[0])!= Math.abs(mDestination[1] - mOrigin[1])){
+                        return false;
+                    }
+
                     return true;
             }
         }
 
         if (this instanceof Queen) {
             if (isObstructed(mOrigin, mDestination, mTiles) == true){
-                System.out.println("Obstructed");
+                err[0]="Obstructed";
                 return false;
             }
             // no limit on distance
@@ -339,11 +363,11 @@ public class ChessPiece {
         }
         if (this instanceof King) {
             if (isObstructed(mOrigin, mDestination, mTiles) == true){
-                System.out.println("Obstructed");
+                err[0]="Obstructed";
                 return false;
             }
             if (distance[2] > 1) {
-                System.out.println("distance > 1  king can't move ");
+                err[0]="distance > 1  king can't move ";
                 return false;
             }
             // no limit on distance
@@ -366,19 +390,19 @@ public class ChessPiece {
             // no such thing as obstructed for a knight
             // distance will be tricky.  must be 2 then 1 or 1 then 2 in any direction
             if (distance[2] > 2) {
-                System.out.println("distance > 1  knight can't move ");
+                err[0]="distance > 1  knight can't move ";
                 return false;
             }
             // color does not matter
             // compas does not matter
-            System.out.println("column " + Math.abs(mDestination[0] - mOrigin[0]) );
-            System.out.println("row " + Math.abs(mDestination[1] - mOrigin[1]) );
+            //System.out.println("column " + Math.abs(mDestination[0] - mOrigin[0]) );
+            //System.out.println("row " + Math.abs(mDestination[1] - mOrigin[1]) );
             if (Math.abs(mDestination[0] - mOrigin[0])==1 && Math.abs(mDestination[1] - mOrigin[1])==2){
                 return true;
             }else if (Math.abs(mDestination[0] - mOrigin[0])==2 && Math.abs(mDestination[1] - mOrigin[1])==1){
                 return true;
             }
-            System.out.println("Knights must move over two and up/down one OR over one and up/down two.");
+            err[0]="Knights must move over two and up/down one OR over one and up/down two.";
             return false;
         }
 

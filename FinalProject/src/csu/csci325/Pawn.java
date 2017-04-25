@@ -18,7 +18,7 @@ public class Pawn  extends ChessPiece{
     }
     public String toString(){
         if (super.getColor() == 1) {
-            return "Pawn W       ";
+            return "Pawn O       ";
         }else if (super.getColor() == 0) {
             return "Pawn B       ";
         }else{

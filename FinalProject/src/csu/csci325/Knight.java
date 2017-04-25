@@ -17,7 +17,7 @@ public class Knight extends ChessPiece {
     }
     public String toString(){
         if (super.getColor() == 1) {
-            return "Knight W     ";
+            return "Knight O       ";
         }else if (super.getColor() == 0) {
             return "Knight B     ";
         }else{
@@ -27,7 +27,6 @@ public class Knight extends ChessPiece {
     //public int getColor(){
     //    return super.getColor();
     //}
-
     public boolean CantMove(int[] mOrigin, int[] mDestination, Tile[][] mTiles){
 
 
