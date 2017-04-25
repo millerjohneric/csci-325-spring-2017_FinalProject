@@ -59,16 +59,17 @@
                 <element signature="docComment;method#getDirection#0;class#ChessPiece#0" expanded="false" />
                 <element signature="e#815#889#0" expanded="false" />
                 <element signature="docComment;method#isEnemy#0;class#ChessPiece#0" expanded="false" />
-                <marker date="1493089903850" expanded="true" signature="7078:15864" ph="{...}" />
-                <marker date="1493089903850" expanded="true" signature="7546:7645" ph="//..." />
-                <marker date="1493089903850" expanded="true" signature="7683:7891" ph="//..." />
-                <marker date="1493089903850" expanded="true" signature="12142:12293" ph="//..." />
-                <marker date="1493089903850" expanded="true" signature="12528:12588" ph="//..." />
-                <marker date="1493089903850" expanded="true" signature="13035:13095" ph="//..." />
-                <marker date="1493089903850" expanded="true" signature="13708:13768" ph="//..." />
-                <marker date="1493089903850" expanded="true" signature="14448:14508" ph="//..." />
-                <marker date="1493089903850" expanded="true" signature="14903:15033" ph="//..." />
-                <marker date="1493089903850" expanded="true" signature="15184:15417" ph="//..." />
+                <marker date="1493090080876" expanded="true" signature="6686:6985" ph="/**...*/" />
+                <marker date="1493090080876" expanded="true" signature="7078:15864" ph="{...}" />
+                <marker date="1493090080876" expanded="true" signature="7546:7645" ph="//..." />
+                <marker date="1493090080876" expanded="true" signature="7683:7891" ph="//..." />
+                <marker date="1493090080876" expanded="true" signature="12142:12293" ph="//..." />
+                <marker date="1493090080876" expanded="true" signature="12528:12588" ph="//..." />
+                <marker date="1493090080876" expanded="true" signature="13035:13095" ph="//..." />
+                <marker date="1493090080876" expanded="true" signature="13708:13768" ph="//..." />
+                <marker date="1493090080876" expanded="true" signature="14448:14508" ph="//..." />
+                <marker date="1493090080876" expanded="true" signature="14903:15033" ph="//..." />
+                <marker date="1493090080876" expanded="true" signature="15184:15417" ph="//..." />
               </folding>
             </state>
           </provider>
@@ -572,6 +573,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-14" y="-14" width="2764" height="1784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -582,8 +584,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937294" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.9240924" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="2" y="214" width="1810" height="1329" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937294" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -593,8 +595,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41452146" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -641,7 +643,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/csu/csci325/ChessPiece.java</url>
-          <line>330</line>
+          <line>326</line>
           <properties />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
@@ -687,16 +689,17 @@
             <element signature="docComment;method#getDirection#0;class#ChessPiece#0" expanded="false" />
             <element signature="e#815#889#0" expanded="false" />
             <element signature="docComment;method#isEnemy#0;class#ChessPiece#0" expanded="false" />
-            <marker date="1493089903850" expanded="true" signature="7078:15864" ph="{...}" />
-            <marker date="1493089903850" expanded="true" signature="7546:7645" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="7683:7891" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="12142:12293" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="12528:12588" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="13035:13095" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="13708:13768" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="14448:14508" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="14903:15033" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="15184:15417" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="6686:6985" ph="/**...*/" />
+            <marker date="1493090080876" expanded="true" signature="7078:15864" ph="{...}" />
+            <marker date="1493090080876" expanded="true" signature="7546:7645" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="7683:7891" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="12142:12293" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="12528:12588" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="13035:13095" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="13708:13768" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="14448:14508" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="14903:15033" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="15184:15417" ph="//..." />
           </folding>
         </state>
       </provider>
@@ -726,10 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding>
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -766,9 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
           <caret line="622" column="0" lean-forward="false" selection-start-line="622" selection-start-column="0" selection-end-line="622" selection-end-column="0" />
-          <folding>
-            <element signature="e#22821#22822#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -846,12 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="226" column="0" lean-forward="false" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
-          <folding>
-            <element signature="e#5764#5771#0" expanded="false" />
-            <element signature="e#5847#6009#0" expanded="false" />
-            <element signature="e#6008#6009#0" expanded="false" />
-            <element signature="e#7547#7548#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -894,11 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
-          <folding>
-            <element signature="e#3786#3787#0" expanded="false" />
-            <element signature="e#3842#3843#0" expanded="false" />
-            <element signature="e#4922#4923#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -906,7 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="2337" column="0" lean-forward="false" selection-start-line="2337" selection-start-column="0" selection-end-line="2337" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,10 +940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding>
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -967,10 +947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -978,10 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="23" column="28" lean-forward="false" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-          <folding>
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -989,7 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
           <caret line="144" column="45" lean-forward="false" selection-start-line="144" selection-start-column="45" selection-end-line="144" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -997,7 +968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="8413" column="0" lean-forward="false" selection-start-line="8413" selection-start-column="0" selection-end-line="8413" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,7 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1020,10 +989,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="2494" column="0" lean-forward="false" selection-start-line="2494" selection-start-column="0" selection-end-line="2494" selection-end-column="0" />
-          <folding>
-            <element signature="e#66617#66618#0" expanded="false" />
-            <element signature="e#66663#66664#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1070,16 +1035,17 @@
             <element signature="docComment;method#getDirection#0;class#ChessPiece#0" expanded="false" />
             <element signature="e#815#889#0" expanded="false" />
             <element signature="docComment;method#isEnemy#0;class#ChessPiece#0" expanded="false" />
-            <marker date="1493089903850" expanded="true" signature="7078:15864" ph="{...}" />
-            <marker date="1493089903850" expanded="true" signature="7546:7645" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="7683:7891" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="12142:12293" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="12528:12588" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="13035:13095" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="13708:13768" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="14448:14508" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="14903:15033" ph="//..." />
-            <marker date="1493089903850" expanded="true" signature="15184:15417" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="6686:6985" ph="/**...*/" />
+            <marker date="1493090080876" expanded="true" signature="7078:15864" ph="{...}" />
+            <marker date="1493090080876" expanded="true" signature="7546:7645" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="7683:7891" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="12142:12293" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="12528:12588" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="13035:13095" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="13708:13768" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="14448:14508" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="14903:15033" ph="//..." />
+            <marker date="1493090080876" expanded="true" signature="15184:15417" ph="//..." />
           </folding>
         </state>
       </provider>
@@ -1088,7 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
           <caret line="304" column="25" lean-forward="false" selection-start-line="304" selection-start-column="25" selection-end-line="304" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
